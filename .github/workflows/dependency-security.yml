@@ -1,0 +1,43 @@
+name: Dependency security verification
+on:
+  push:
+    branches: [fix/dependency-security]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    env:
+      SKIP_RELEASE_ARTIFACTS: 'true'
+      NX_DAEMON: 'false'
+      NODE_OPTIONS: --max-old-space-size=6144
+      STORYBOOK_DISABLE_TELEMETRY: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: corepack enable && corepack prepare yarn@1.22.22 --activate
+      - name: Resolve security updates
+        run: yarn install --ignore-scripts --non-interactive --network-timeout 30000 2>&1 | tee security-install.log
+      - name: Record remaining advisories
+        if: always()
+        run: yarn audit --json > security-audit.jsonl || true
+      - name: Build core and dependencies
+        run: yarn build:package @vibe/core
+      - name: Build documentation blocks
+        run: yarn workspace vibe-storybook-components build
+      - name: Test Button
+        run: yarn workspace @vibe/button test
+      - name: Build Storybook
+        run: yarn workspace @vibe/docs build-storybook
+      - name: Upload security verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-security-results
+          path: |
+            yarn.lock
+            security-audit.jsonl
+            security-install.log

@@ -13,7 +13,7 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.2.0",
     "bytes": "^3.1.2",
-    "lerna": "^8.1.2",
+    "lerna": "^10.1.1",
     "size-limit": "^11.2.0",
     "typescript": "^5.9.3"
   },
@@ -21,5 +21,9 @@
     "packages/*",
     "packages/components/*"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=24.19.0 <25"
+  }
 }
