@@ -75,6 +75,8 @@ export default {
     const { mergeConfig } = await import("vite");
 
     return mergeConfig(config, {
+      // Keep preview assets relative for project Pages sites such as /vibe/.
+      base: "./",
       resolve: {
         alias: {
           "@vibe/style/dist/index.min.css": path.resolve(__dirname, "../../style/src/index.scss"),

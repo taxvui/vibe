@@ -1,39 +1,63 @@
-name: Publish Storybooks
+name: Deploy Vibe Prism to GitHub Pages
 
 on:
-  workflow_run:
-    workflows: ["Release new version"]
-    types:
-      - completed
+  push:
+    branches: [feat/prism-liquid-glass]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+    env:
+      SKIP_RELEASE_ARTIFACTS: 'true'
+      STORYBOOK_DISABLE_TELEMETRY: '1'
+      NODE_OPTIONS: --max-old-space-size=6144
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          fetch-depth: 0
-      - name: Run Setup
-        uses: ./.github/actions/setup
-        with:
-          npm_token: ${{ secrets.npm_token }}
-      - name: Build & deploy Storybooks to GitHub Pages
+          node-version-file: .nvmrc
+      - name: Enable Yarn Classic
         run: |
-          yarn lerna run build --include-dependencies
-          yarn lerna run --scope @vibe/docs build-storybook
-          cd packages/docs/static_storybook
-          echo "vibe.monday.com" > ./CNAME
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
-      - name: Push core Storybook to Github Pages
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
+          corepack enable
+          corepack prepare yarn@1.22.22 --activate
+      - name: Install locked dependencies
+        run: yarn install --frozen-lockfile --ignore-scripts
+      - name: Build library dependencies
+        run: yarn build:package @vibe/core
+      - name: Build documentation components
+        run: yarn workspace vibe-storybook-components build
+      - name: Check Prism
+        run: |
+          yarn workspace @vibe/docs typecheck:prism
+          yarn workspace @vibe/docs lint:prism
+          yarn workspace @vibe/docs test:prism
+      - name: Build showcase
+        run: yarn workspace @vibe/docs build-storybook
+      - name: Prepare Pages artifact
+        run: |
+          rm -f packages/docs/static_storybook/CNAME
+          touch packages/docs/static_storybook/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
         with:
-          clean-exclude: |
-            v2/*
-            v3/*
-            playground/*
-          folder: packages/docs/static_storybook
-          branch: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: packages/docs/static_storybook
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy showcase
+        id: deployment
+        uses: actions/deploy-pages@v5
