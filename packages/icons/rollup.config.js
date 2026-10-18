@@ -15,5 +15,5 @@ export default {
     format: "esm"
   },
   external: [/node_modules/],
-  plugins: [resolve(), typescript(), terser(), svg()]
+  plugins: [resolve(), typescript({ include: ["**/*.ts", "**/*.tsx"] }), terser(), svg()]
 };

@@ -25,7 +25,11 @@ jobs:
         if: always()
         run: yarn audit --json > security-audit.jsonl || true
       - name: Build core and dependencies
-        run: yarn build:package @vibe/core
+        run: |
+          yarn build:package @vibe/core
+          test -s packages/components/button/dist/index.d.ts
+          test -s packages/icons/dist/react/index.d.ts
+          test -s packages/core/dist/index.d.ts
       - name: Build documentation blocks
         run: yarn workspace vibe-storybook-components build
       - name: Test Button

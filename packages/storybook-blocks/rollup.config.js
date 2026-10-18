@@ -35,6 +35,7 @@ export default {
       extensions: [...EXTENSIONS, '.json', '.css'],
     }),
     typescript({
+      include: ["**/*.ts", "**/*.tsx"],
       tsconfig: path.join(ROOT_PATH, 'tsconfig.json'),
     }),
     babel({
