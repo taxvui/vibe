@@ -294,6 +294,10 @@
   overflow-x: auto;
   margin-top: var(--prism-space-4);
 }
+.prism-table-scroll:focus-visible {
+  outline: 2px solid var(--prism-ring);
+  outline-offset: 3px;
+}
 .prism-table-scroll table {
   border-collapse: collapse;
   width: 100%;
@@ -470,6 +474,9 @@
   }
   .prism-main {
     padding: var(--prism-space-6) var(--prism-space-4);
+  }
+  .prism-hero {
+    scroll-margin-top: calc(var(--prism-mobile-header-height) + var(--prism-space-4));
   }
   .prism-hero h1 {
     font-size: clamp(2rem, 9.8vw, 2.5rem);

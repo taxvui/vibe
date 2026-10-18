@@ -114,11 +114,11 @@ import "@vibe/core/tokens";
         }
       }}
     >
-      <a className="prism-skip" href="#prism-main">
+      <a className="prism-skip" target="_self" href="#prism-main">
         Skip to content
       </a>
       <header className="prism-header">
-        <a href="#overview" className="prism-wordmark">
+        <a target="_self" href="#overview" className="prism-wordmark">
           <span aria-hidden="true" className="prism-mark" />
           vibe <span>prism</span>
         </a>
@@ -168,7 +168,12 @@ import "@vibe/core/tokens";
           <p className="prism-eyebrow">The system</p>
           <nav aria-label="Prism documentation">
             {sections.map(section => (
-              <a key={section} href={`#${section.toLowerCase().replace(/ /g, "-")}`} onClick={() => setMenuOpen(false)}>
+              <a
+                key={section}
+                target="_self"
+                href={`#${section.toLowerCase().replace(/ /g, "-")}`}
+                onClick={() => setMenuOpen(false)}
+              >
                 {section}
               </a>
             ))}
@@ -192,7 +197,7 @@ import "@vibe/core/tokens";
               your own.
             </p>
             <div className="prism-row prism-hero-links">
-              <a className="prism-link" href="#components">
+              <a className="prism-link" target="_self" href="#components">
                 Explore the components <span aria-hidden="true">↗</span>
               </a>
               <span className="prism-caption">React · TypeScript · MIT</span>
@@ -421,7 +426,7 @@ import "@vibe/core/tokens";
               onChange={setQuery}
               placeholder="Search by name or category"
             />
-            <div className="prism-table-scroll">
+            <div className="prism-table-scroll" role="region" aria-label="Component inventory" tabIndex={0}>
               <table>
                 <caption>Components demonstrated in this milestone</caption>
                 <thead>

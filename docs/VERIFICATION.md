@@ -1,6 +1,6 @@
 # Verification record
 
-Run against this milestone on 2026-10-18. Environment: Node 24.19.0, Yarn Classic 1.22.22, React 16.14 and local Chromium 131 (Playwright 1.49.1). The repository’s intended development Node version remains 20.12. No packages were published and no hosted website was deployed.
+Run against this milestone on 2026-10-18. Environment: Node 24.19.0, Yarn Classic 1.22.22, React 16.14 and local Chromium 131 (Playwright 1.49.1). The repository’s intended development Node version remains 20.12. No packages were published. The showcase is now deployed on GitHub Pages; see the mobile follow-up below.
 
 ## Baseline and existing blockers
 
@@ -8,7 +8,7 @@ Initial core test, lint and build attempts failed with missing executables becau
 
 A detached checkout of original commit `3392aa5ef` was typechecked using the same installed dependencies. Original docs produced **559 TypeScript diagnostics**. Current full docs typecheck produces **324 diagnostics**, all present in the baseline comparison (0 new diagnostics; 235 eliminated by the Sass module declaration). Remaining failures include old Storybook interaction APIs, missing asset declarations and legacy DOM properties. These are not hidden or counted as a passing whole-docs check. The focused Prism typecheck passes.
 
-The first static Storybook build exhausted Node’s default 2 GB heap. Re-running with `NODE_OPTIONS=--max-old-space-size=6144` succeeded. The initial dev-server attempt hit this container’s `uv_interface_addresses` restriction; browser QA used the actual production Storybook output served over a local Python HTTP server instead. This is not a deployment.
+The first static Storybook build exhausted Node’s default 2 GB heap. Re-running with `NODE_OPTIONS=--max-old-space-size=6144` succeeded. The initial dev-server attempt hit this container’s `uv_interface_addresses` restriction; browser QA used the actual production Storybook output served over a local Python HTTP server instead. That initial browser check used local output; subsequent Pages deployments are recorded below.
 
 ## Executed checks
 
@@ -20,7 +20,7 @@ The first static Storybook build exhausted Node’s default 2 GB heap. Re-runnin
 | `vibe-storybook-components` build                           | Pass                                                      |
 | Static Storybook production build, 6 GB heap                | Pass                                                      |
 | Core Vitest suite                                           | 7 files, **62 tests passed**, including 4 new Prism tests |
-| Showcase Vitest suite                                       | 1 file, **5 tests passed**                                |
+| Showcase Vitest suite                                       | 1 file, **6 tests passed**                                |
 | Grid keyboard-navigation helper/hook tests                  | 2 files, **46 tests passed**                              |
 | Tabs full suite, final run without snapshot updating        | 6 files, **33 tests passed**                              |
 | TextField suite, final run without snapshot updating        | 3 files, **65 tests passed**                              |
@@ -35,7 +35,7 @@ The first static Storybook build exhausted Node’s default 2 GB heap. Re-runnin
 | Legacy generated token file                                 | Unchanged after fixing scoped palette extraction          |
 | Diff whitespace and browser script syntax                   | Pass                                                      |
 
-Total executed unit/interaction tests listed above: **211 passed**. Tests do not rely on Chromatic. The 11 Tabs snapshots were reviewed and updated only for the added focus handler; 23 TextField snapshots were reviewed and updated for omission of empty role attributes. Subsequent runs passed without `-u`.
+Total executed unit/interaction tests listed above: **212 passed**. Tests do not rely on Chromatic. The 11 Tabs snapshots were reviewed and updated only for the added focus handler; 23 TextField snapshots were reviewed and updated for omission of empty role attributes. Subsequent runs passed without `-u`.
 
 ## Browser and visual review
 
@@ -47,10 +47,22 @@ A real mobile overflow in Tabs and inherited global code styling were found duri
 
 ## Skipped or deferred
 
-- Remote Chromatic publishing and screenshot comparison: no external credentials used.
+- Chromatic publishing now succeeds with the updated GitHub secret on security PR #4 (build 5). This is separate from mobile screenshot QA; no Chromatic baseline comparison for these mobile changes is claimed.
 - Entire 68-workspace test suite, mobile device/GPU benchmarks, Safari/Firefox and React version matrix: not executed.
 - Full license/SBOM audit of transitive dependencies: not represented as complete. No new runtime dependency was added; existing license notices are preserved.
 - Genuine SVG/Canvas/WebGL refraction: not implemented; the named material uses a documented liquid fallback.
 - Individual visual and behavior certification of all 57 component packages: remaining milestone work.
 
 The inherited all-component Storybook still emits large-chunk warnings (including a roughly 5.3 MB uncompressed preview chunk). Lazy-loading the upstream live editor/playground and splitting the reference docs are recommended before treating documentation bundle performance as finished.
+
+## Mobile Pages follow-up — 2026-10-18
+
+The existing Storybook manager and Prism showcase were adapted together: a compact mobile header, 44 px touch targets, 16 px native selects, a bounded navigation disclosure, restrained typography and a smaller material stage. The manager toolbar is hidden below 600 px while the bottom Storybook navigation remains available. Desktop sidebar sizing no longer forces a reload on phones.
+
+Keyboard navigation closes the disclosure with Escape and restores focus. Internal anchors explicitly target the current frame because Storybook supplies a `_parent` base target. Sticky-header scroll offsets keep headings visible. The horizontally scrollable inventory has a named, focusable region with a visible focus outline.
+
+The browser script now covers 320, 390, 430, 768 and 1440 px in both modes, plus full-manager mobile interaction checks at 320, 390 and 430 px. Run it against a production build served at `http://127.0.0.1:7008`, or set `PRISM_STORYBOOK_URL`.
+
+Final follow-up results: all **10 light/dark viewport scenarios**, **3 mobile-manager scenarios**, opaque fallback and modal focus checks passed. Focused showcase tests: **6 passed**; Prism TypeScript, ESLint, recommended SCSS stylelint (with the repository's descending-specificity exception), production Storybook build, script syntax and diff whitespace checks passed. Existing production chunk-size warnings remain. Safari/Firefox and real mobile hardware were not tested.
+
+![Mobile Storybook preview at 390 px](prism-preview-mobile.png)

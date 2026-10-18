@@ -11,7 +11,7 @@ async function main() {
   const browser = await chromium.launch({ headless: true });
   try {
     for (const mode of ["light", "dark"]) {
-      for (const width of [390, 768, 1440]) {
+      for (const width of [320, 390, 430, 768, 1440]) {
         const page = await browser.newPage({ viewport: { width, height: 1000 }, reducedMotion: "reduce" });
         await page.route("**/*", route =>
           route.request().url().startsWith(origin) ? route.continue() : route.abort()
@@ -51,6 +51,48 @@ async function main() {
         await page.close();
         console.log(`PASS ${mode} ${width}px: no overflow, axe violations or runtime errors`);
       }
+    }
+    // Exercise the full manager as well as the iframe: its chrome must not crowd phones.
+    for (const width of [320, 390, 430]) {
+      const page = await browser.newPage({ viewport: { width, height: 844 }, isMobile: true, hasTouch: true });
+      await page.route("**/*", route => (route.request().url().startsWith(origin) ? route.continue() : route.abort()));
+      await page.goto(`${origin}/?path=/story/prism-design-system--light`);
+      const canvas = page.frameLocator("#storybook-preview-iframe");
+      await canvas.getByRole("heading", { name: "Less surface. More possibility." }).waitFor();
+      // Storybook translates the hidden toolbar offscreen; it remains mounted.
+      await expect(page.getByRole("button", { name: "Zoom in", exact: true })).not.toBeInViewport();
+      const explore = canvas.getByRole("button", { name: "Explore", exact: true });
+      const theme = canvas.getByRole("button", { name: "Dark mode", exact: true });
+      assert.ok((await explore.boundingBox()).height >= 44);
+      const themeBounds = await theme.boundingBox();
+      assert.ok(themeBounds.width >= 44 && themeBounds.height >= 44);
+      const logo = await canvas.locator(".prism-wordmark").boundingBox();
+      assert.ok(logo.x + logo.width <= (await explore.boundingBox()).x, "Header controls overlap");
+      await page.screenshot({ path: path.join(output, `mobile-manager-${width}.png`) });
+      await explore.click();
+      await expect(explore).toHaveAttribute("aria-expanded", "true");
+      await page.keyboard.press("Escape");
+      await expect(explore).toHaveAttribute("aria-expanded", "false");
+      await expect(explore).toBeFocused();
+      await explore.click();
+      await canvas
+        .getByRole("navigation", { name: "Prism documentation" })
+        .getByRole("link", { name: "Materials", exact: true })
+        .click();
+      await expect(explore).toHaveAttribute("aria-expanded", "false");
+      await expect.poll(async () => (await canvas.locator("#materials").boundingBox()).y).toBeGreaterThanOrEqual(69);
+      const material = canvas.getByRole("combobox", { name: /^Material/ });
+      await expect(material).toHaveCSS("font-size", "16px");
+      assert.ok((await material.boundingBox()).height >= 48);
+      await material.selectOption("liquid");
+      await expect(canvas.getByText("liquid material", { exact: true })).toBeVisible();
+      await theme.click();
+      await expect(canvas.locator("[data-vibe-prism]")).toHaveAttribute("data-vibe-prism", "dark");
+      await canvas.getByRole("link", { name: "vibe prism", exact: true }).click();
+      await expect.poll(async () => (await canvas.locator("#overview").boundingBox()).y).toBeGreaterThanOrEqual(69);
+      await page.screenshot({ path: path.join(output, `mobile-manager-dark-${width}.png`) });
+      await page.close();
+      console.log(`PASS mobile manager ${width}px: navigation, touch targets, anchors and theme/material controls`);
     }
     const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, reducedMotion: "reduce" });
     await page.route("**/*", route => (route.request().url().startsWith(origin) ? route.continue() : route.abort()));
