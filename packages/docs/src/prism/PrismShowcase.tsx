@@ -60,6 +60,7 @@ export default function PrismShowcase({ initialMode = "light" }: PrismShowcasePr
   const [menuOpen, setMenuOpen] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
   const themeRef = useRef<HTMLDivElement>(null);
+  const menuRef = useRef<HTMLButtonElement>(null);
   const codeRef = useRef<HTMLElement>(null);
   const colors = accents[brand][mode];
   const style: TokenStyle = {
@@ -105,6 +106,13 @@ import "@vibe/core/tokens";
       transparency={opaque ? "reduced" : "full"}
       style={style}
       className="prism-showcase"
+      onKeyDown={event => {
+        if (event.key === "Escape" && menuOpen) {
+          event.preventDefault();
+          setMenuOpen(false);
+          menuRef.current?.focus();
+        }
+      }}
     >
       <a className="prism-skip" href="#prism-main">
         Skip to content
@@ -117,15 +125,42 @@ import "@vibe/core/tokens";
         <span className="prism-header-note">An independent material study · 01</span>
         <button
           type="button"
+          ref={menuRef}
           className="prism-mobile-menu"
           aria-expanded={menuOpen}
           aria-controls="prism-navigation"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          Explore
+          Explore <span aria-hidden="true">{menuOpen ? "−" : "+"}</span>
         </button>
-        <Button kind="secondary" size="small" onClick={() => setMode(mode === "light" ? "dark" : "light")}>
-          {mode === "light" ? "Dark mode" : "Light mode"}
+        <Button
+          kind="secondary"
+          size="small"
+          className="prism-theme-toggle"
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+        >
+          <svg
+            className="prism-theme-icon"
+            aria-hidden="true"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            {mode === "light" ? (
+              <path d="M20.5 14.4A8.5 8.5 0 0 1 9.6 3.5 8.5 8.5 0 1 0 20.5 14.4Z" />
+            ) : (
+              <>
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5" />
+              </>
+            )}
+          </svg>
+          <span className="prism-mode-label">{mode === "light" ? "Dark mode" : "Light mode"}</span>
         </Button>
       </header>
       <div className="prism-shell">
@@ -156,7 +191,7 @@ import "@vibe/core/tokens";
               An expressive material layer for real interfaces. Quiet color, tactile depth, and components you can make
               your own.
             </p>
-            <div className="prism-row">
+            <div className="prism-row prism-hero-links">
               <a className="prism-link" href="#components">
                 Explore the components <span aria-hidden="true">↗</span>
               </a>
@@ -198,7 +233,9 @@ import "@vibe/core/tokens";
                 <option value="ocean">Ocean</option>
               </select>
             </label>
-            <Checkbox label="Opaque surfaces" checked={opaque} onChange={e => setOpaque(e.target.checked)} />
+            <div className="prism-opaque-control">
+              <Checkbox label="Opaque surfaces" checked={opaque} onChange={e => setOpaque(e.target.checked)} />
+            </div>
           </section>
           <section id="materials" className="prism-section">
             <div className="prism-section-title">

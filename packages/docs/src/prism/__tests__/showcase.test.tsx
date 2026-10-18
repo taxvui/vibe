@@ -66,3 +66,16 @@ it("provides syntactically valid copyable TSX after changing the material settin
   expect(code).toContain('transparency="reduced"');
   expect(result.diagnostics?.filter(item => item.category === ts.DiagnosticCategory.Error)).toEqual([]);
 });
+
+it("closes the mobile navigation with Escape and restores focus", () => {
+  render(<PrismShowcase />);
+  const explore = screen.getByRole("button", { name: "Explore", exact: true });
+  userEvent.click(explore);
+  expect(explore).toHaveAttribute("aria-expanded", "true");
+  fireEvent.keyDown(screen.getByRole("navigation", { name: "Prism documentation" }), { key: "Escape" });
+  expect(explore).toHaveAttribute("aria-expanded", "false");
+  expect(explore).toHaveFocus();
+  userEvent.click(explore);
+  userEvent.click(screen.getByRole("link", { name: "Materials", exact: true }));
+  expect(explore).toHaveAttribute("aria-expanded", "false");
+});

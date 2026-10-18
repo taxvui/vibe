@@ -5,8 +5,13 @@ import "vibe-storybook-components/index.css";
 import theme from "./theme";
 import isChromatic from "chromatic/isChromatic";
 
+// On phones, start with the canvas and reserve screen space for the components.
+const compactViewport = window.matchMedia("(max-width: 600px)");
+compactViewport.addEventListener?.("change", event => addons.setConfig({ showToolbar: !event.matches }));
 
 addons.setConfig({
+  initialActive: "canvas",
+  showToolbar: !compactViewport.matches,
   theme: theme,
   sidebar: {
     renderLabel: ({ name, parameters = {} }) => {
