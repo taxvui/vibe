@@ -23,7 +23,8 @@
     "./vitest.config": "./vitest.config.mjs"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "@rollup/plugin-terser": "^1.0.0"
   },
   "dependencies": {
     "@rollup/plugin-babel": "^6.0.2",

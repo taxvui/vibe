@@ -285,7 +285,6 @@
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-import-css": "^3.1.0",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "sass": "^1.51.0",
     "snapshot-diff": "^0.9.0",
@@ -303,7 +302,8 @@
     "typescript-plugin-css-modules": "^4.2.1",
     "vibe-storybook-components": "4.0.0",
     "vite": "^5.3.1",
-    "vitest": "^1.6.0"
+    "vitest": "^1.6.0",
+    "@rollup/plugin-terser": "^1.0.0"
   },
   "peerDependencies": {
     "react": ">=16.9.0",

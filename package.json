@@ -24,6 +24,11 @@
   "dependencies": {},
   "packageManager": "yarn@1.22.22",
   "engines": {
-    "node": ">=24.19.0 <25"
+    "node": "^22.22.2 || ^24.15.0 || ^26.0.0"
+  },
+  "resolutions": {
+    "@types/parse-path": "7.0.3",
+    "**/nx/undici": "^7.29.1",
+    "**/external-editor/tmp": "^0.2.6"
   }
 }
