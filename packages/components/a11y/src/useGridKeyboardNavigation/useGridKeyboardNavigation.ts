@@ -169,6 +169,13 @@ export default function useGridKeyboardNavigation({
     }
   }, [activeIndex, ref]);
 
+  // Track a focused descendant without activating it. Composite widgets such
+  // as tabs keep focus on their items rather than the container itself.
+  const onFocusAction = useCallback((index: number) => {
+    setIsUsingKeyboardNav(true);
+    setActiveIndex(index);
+  }, []);
+
   const onSelectionAction = useCallback(
     (index: number, isKeyboardAction = false) => {
       setIsUsingKeyboardNav(isKeyboardAction);
@@ -200,6 +207,7 @@ export default function useGridKeyboardNavigation({
   const externalActiveIndex = isUsingKeyboardNav ? activeIndex : NO_ACTIVE_INDEX;
   return {
     activeIndex: externalActiveIndex,
+    onFocusAction,
     onSelectionAction,
     isInitialActiveState
   };

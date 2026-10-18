@@ -19,7 +19,13 @@
     "storybook": "storybook dev -p 7008",
     "build-storybook": "storybook build -o static_storybook && node .storybook/storybook-title-fix.js static_storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "chromatic:local": "chromatic -t $CHROMATIC_PROJECT_TOKEN"
+    "chromatic:local": "chromatic -t $CHROMATIC_PROJECT_TOKEN",
+    "test:prism": "vitest run --config vitest.prism.config.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.storybook.json",
+    "typecheck:prism": "tsc --noEmit -p tsconfig.prism.json",
+    "lint:prism": "eslint \"src/prism/**/*.{ts,tsx}\" vitest.prism.config.ts",
+    "test": "yarn test:prism",
+    "lint": "yarn lint:prism"
   },
   "dependencies": {
     "@vibe/core": "4.5.36",

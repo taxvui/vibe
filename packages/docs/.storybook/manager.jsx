@@ -5,8 +5,6 @@ import "vibe-storybook-components/index.css";
 import theme from "./theme";
 import isChromatic from "chromatic/isChromatic";
 
-window.STORYBOOK_GA_ID = "UA-308574295";
-window.STORYBOOK_REACT_GA_OPTIONS = {};
 
 addons.setConfig({
   theme: theme,

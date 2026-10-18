@@ -239,7 +239,7 @@ const TextField = forwardRef(
       maxLength = null,
       allowExceedingMaxLength = false,
       trim = false,
-      role = "",
+      role,
       required = false,
       requiredErrorText = "",
       loading = false,
@@ -400,7 +400,7 @@ const TextField = forwardRef(
               onKeyDown={onKeyDown}
               onWheel={onWheel}
               maxLength={typeof maxLength === "number" && !allowExceedingMaxLength ? maxLength : undefined}
-              role={searchResultsContainerId && "combobox"} // For voice reader
+              role={searchResultsContainerId ? "combobox" : undefined} // For voice reader
               aria-label={inputAriaLabel || placeholder}
               aria-invalid={(validation && validation.status === "error") || isRequiredAndEmpty}
               aria-owns={searchResultsContainerId || undefined}

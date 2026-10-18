@@ -126,6 +126,7 @@ const Tab: FC<TabProps> = forwardRef(
     function handleKeyDown(event: React.KeyboardEvent) {
       if (event.key === keyCodes.ENTER || event.key === keyCodes.SPACE) {
         event.preventDefault();
+        event.stopPropagation();
         !disabled && onClick(value);
       }
     }

@@ -1,0 +1,226 @@
+/* stylelint-disable property-no-vendor-prefix -- Retain prefixed backdrop-filter for Safari fallback. */
+/* stylelint-disable declaration-no-important -- Scoped focus and reduced-motion preferences must win over existing component rules. */
+// Opt-in theme. Existing Vibe applications keep their current appearance.
+[data-vibe-prism] {
+  --prism-background: #f5f4f0;
+  --prism-foreground: #202724;
+  --prism-surface: #fffefa;
+  --prism-surface-elevated: #ffffff;
+  --prism-card: var(--prism-surface);
+  --prism-popover: var(--prism-surface-elevated);
+  --prism-primary: #285e50;
+  --prism-primary-hover: #1c493e;
+  --prism-primary-foreground: #ffffff;
+  --prism-secondary: #e4e9e5;
+  --prism-muted: #eaece7;
+  --prism-muted-foreground: #56635d;
+  --prism-accent: #dcebe2;
+  --prism-border: #cbd3cc;
+  --prism-input: #78867d;
+  --prism-ring: var(--prism-primary);
+  --prism-success: #216343;
+  --prism-warning: #805000;
+  --prism-destructive: #b52b3d;
+  --prism-info: #245e9b;
+  --prism-glass-tint: 255, 254, 250;
+  --prism-glass-edge: 255, 255, 255;
+  --prism-glass-opacity: 0.78;
+  --prism-glass-border-opacity: 0.65;
+  --prism-glass-highlight: 0.55;
+  --prism-glass-blur: 16px;
+  --prism-glass-saturation: 115%;
+  --prism-font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --prism-font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --prism-text-xs: 0.75rem;
+  --prism-text-sm: 0.875rem;
+  --prism-text-base: 1rem;
+  --prism-text-lg: 1.25rem;
+  --prism-text-xl: 2rem;
+  --prism-text-display: clamp(2.5rem, 5vw, 4.5rem);
+  --prism-weight-normal: 400;
+  --prism-weight-medium: 500;
+  --prism-weight-bold: 650;
+  --prism-leading-body: 1.6;
+  --prism-leading-heading: 1.08;
+  --prism-tracking-heading: -0.045em;
+  --prism-tracking-label: 0.08em;
+  --prism-space-1: 0.25rem;
+  --prism-space-2: 0.5rem;
+  --prism-space-3: 0.75rem;
+  --prism-space-4: 1rem;
+  --prism-space-6: 1.5rem;
+  --prism-space-8: 2rem;
+  --prism-space-12: 3rem;
+  --prism-space-16: 4rem;
+  --prism-radius-sm: 0.5rem;
+  --prism-radius-md: 0.875rem;
+  --prism-radius-lg: 1.5rem;
+  --prism-shadow-sm: 0 2px 6px rgba(20, 35, 27, 0.06);
+  --prism-shadow-md: 0 10px 28px rgba(20, 35, 27, 0.09);
+  --prism-shadow-lg: 0 20px 56px rgba(20, 35, 27, 0.14);
+  --prism-z-sticky: 10;
+  --prism-z-overlay: 100;
+  --prism-z-toast: 200;
+  --prism-duration-fast: 120ms;
+  --prism-duration-normal: 200ms;
+  --prism-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  // Compatibility bridge: existing components consume these values unchanged.
+  --primary-color: var(--prism-primary);
+  --primary-hover-color: var(--prism-primary-hover);
+  --primary-selected-color: var(--prism-accent);
+  --primary-selected-hover-color: var(--prism-secondary);
+  --primary-highlighted-color: var(--prism-accent);
+  --primary-surface-color: var(--prism-surface);
+  --primary-text-color: var(--prism-foreground);
+  --secondary-text-color: var(--prism-muted-foreground);
+  --text-color-on-primary: var(--prism-primary-foreground);
+  --text-color-on-brand: var(--prism-primary-foreground);
+  --inverted-color-background: var(--prism-foreground);
+  --text-color-on-inverted: var(--prism-surface);
+  --disabled-background-color: var(--prism-muted);
+  --disabled-text-color: var(--prism-muted-foreground);
+  --primary-background-color: var(--prism-surface);
+  --secondary-background-color: var(--prism-surface-elevated);
+  --primary-background-hover-color: var(--prism-muted);
+  --allgrey-background-color: var(--prism-background);
+  --ui-background-color: var(--prism-secondary);
+  --ui-background-hover-color: var(--prism-muted);
+  --ui-border-color: var(--prism-input);
+  --layout-border-color: var(--prism-border);
+  --placeholder-color: var(--prism-muted-foreground);
+  --icon-color: var(--prism-muted-foreground);
+  --link-color: var(--prism-primary);
+  --brand-color: var(--prism-primary);
+  --brand-hover-color: var(--prism-primary-hover);
+  --brand-selected-color: var(--prism-accent);
+  --positive-color: var(--prism-success);
+  --positive-color-hover: var(--prism-success);
+  --positive-color-selected: var(--prism-accent);
+  --negative-color: var(--prism-destructive);
+  --negative-color-hover: var(--prism-destructive);
+  --warning-color: var(--prism-warning);
+  --font-family: var(--prism-font-sans);
+  --title-font-family: var(--prism-font-sans);
+  --border-radius-small: var(--prism-radius-sm);
+  --border-radius-medium: var(--prism-radius-md);
+  --border-radius-big: var(--prism-radius-lg);
+  --motion-productive-short: var(--prism-duration-fast);
+  --motion-productive-medium: var(--prism-duration-normal);
+  --motion-timing-transition: var(--prism-ease);
+  color-scheme: light;
+  color: var(--prism-foreground);
+  background: var(--prism-background);
+  font-family: var(--prism-font-sans);
+  line-height: var(--prism-leading-body);
+}
+
+[data-vibe-prism="dark"] {
+  --prism-background: #171d1b;
+  --prism-foreground: #edf2eb;
+  --prism-surface: #222b27;
+  --prism-surface-elevated: #2b3630;
+  --prism-primary: #a6dac1;
+  --prism-primary-hover: #c3e8d5;
+  --prism-primary-foreground: #142d23;
+  --prism-secondary: #34433a;
+  --prism-muted: #2b3730;
+  --prism-muted-foreground: #b3c1b7;
+  --prism-accent: #364f41;
+  --prism-border: #48574d;
+  --prism-input: #849a8a;
+  --prism-success: #91d3ad;
+  --prism-warning: #efc67f;
+  --prism-destructive: #ffacb5;
+  --prism-info: #a3caff;
+  --prism-glass-tint: 34, 43, 39;
+  --prism-glass-edge: 177, 206, 188;
+  --prism-glass-border-opacity: 0.24;
+  --prism-glass-highlight: 0.12;
+  --disabled-background-color: #303c34;
+  --disabled-text-color: #9baba0;
+  color-scheme: dark;
+}
+
+[data-vibe-prism] :focus-visible {
+  outline: 2px solid var(--prism-ring) !important;
+  outline-offset: 3px;
+}
+
+.vibe-prism-glass {
+  --prism-material-opacity: var(--prism-glass-opacity);
+  --prism-material-blur: var(--prism-glass-blur);
+  --prism-material-highlight: var(--prism-glass-highlight);
+  position: relative;
+  isolation: isolate;
+  border: 1px solid var(--prism-border);
+  border-radius: var(--prism-radius-lg);
+  // Opaque first: unsupported browsers must keep readable content.
+  background: var(--prism-card);
+  color: var(--prism-foreground);
+  box-shadow: var(--prism-shadow-sm);
+}
+.vibe-prism-glass[data-material="clear"] {
+  --prism-material-opacity: 0.4;
+  --prism-material-blur: 4px;
+  --prism-material-highlight: 0.08;
+}
+.vibe-prism-glass[data-material="subtle"] {
+  --prism-material-blur: 8px;
+  --prism-material-highlight: 0.12;
+}
+.vibe-prism-glass[data-material="frosted"] {
+  --prism-material-opacity: 0.92;
+  --prism-material-blur: 24px;
+}
+.vibe-prism-glass[data-material="liquid"],
+.vibe-prism-glass[data-material="refractive"] {
+  box-shadow: inset 0 1px 0 rgba(var(--prism-glass-edge), var(--prism-material-highlight)), var(--prism-shadow-md);
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .vibe-prism-glass {
+    background: linear-gradient(135deg, rgba(var(--prism-glass-edge), var(--prism-material-highlight)), transparent 48%),
+      rgba(var(--prism-glass-tint), var(--prism-material-opacity));
+    border-color: rgba(var(--prism-glass-edge), var(--prism-glass-border-opacity));
+    -webkit-backdrop-filter: blur(var(--prism-material-blur)) saturate(var(--prism-glass-saturation));
+    backdrop-filter: blur(var(--prism-material-blur)) saturate(var(--prism-glass-saturation));
+  }
+}
+// Explicit opt-out for complex backdrops, low-powered devices or user preferences.
+[data-vibe-prism][data-transparency="reduced"] .vibe-prism-glass {
+  background: var(--prism-card);
+  border-color: var(--prism-border);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+@media (prefers-reduced-transparency: reduce) {
+  .vibe-prism-glass {
+    background: var(--prism-card);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-vibe-prism] {
+    --prism-duration-fast: 0ms;
+    --prism-duration-normal: 0ms;
+  }
+  [data-vibe-prism] *,
+  [data-vibe-prism] *::before,
+  [data-vibe-prism] *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (forced-colors: active) {
+  .vibe-prism-glass {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}

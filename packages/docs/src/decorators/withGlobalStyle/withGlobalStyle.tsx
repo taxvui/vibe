@@ -4,7 +4,8 @@ import cx from "classnames";
 import styles from "./withGlobalStyle.module.scss";
 import { type Decorator } from "@storybook/react";
 
-const WithGlobalStyle: Decorator = (Story, { className, viewMode }) => {
+const WithGlobalStyle: Decorator = (Story, { className, viewMode, parameters }) => {
+  if (parameters.prismFullscreen) return <Story />;
   return (
     <MultipleStoryElementsWrapper className={cx({ [styles.storyWrapper]: viewMode === "docs" }, className)}>
       <Story />

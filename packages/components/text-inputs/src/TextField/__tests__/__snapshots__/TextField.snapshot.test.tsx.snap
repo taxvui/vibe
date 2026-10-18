@@ -4,7 +4,6 @@ exports[`TextField renders correctly > when disabled 1`] = `
 <div
   aria-busy={false}
   className="textField disabled"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -30,7 +29,6 @@ exports[`TextField renders correctly > when disabled 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -43,7 +41,6 @@ exports[`TextField renders correctly > when loading 1`] = `
 <div
   aria-busy={true}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -69,7 +66,6 @@ exports[`TextField renders correctly > when loading 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -111,7 +107,6 @@ exports[`TextField renders correctly > when readonly 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -137,7 +132,6 @@ exports[`TextField renders correctly > when readonly 1`] = `
         placeholder=""
         readOnly={true}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -150,7 +144,6 @@ exports[`TextField renders correctly > when required 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -176,7 +169,6 @@ exports[`TextField renders correctly > when required 1`] = `
         placeholder=""
         readOnly={false}
         required={true}
-        role=""
         type="text"
         value=""
       />
@@ -189,7 +181,6 @@ exports[`TextField renders correctly > with another type 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -215,7 +206,6 @@ exports[`TextField renders correctly > with another type 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="password"
         value=""
       />
@@ -228,7 +218,6 @@ exports[`TextField renders correctly > with className 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -254,7 +243,6 @@ exports[`TextField renders correctly > with className 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -267,7 +255,6 @@ exports[`TextField renders correctly > with date type 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -293,7 +280,6 @@ exports[`TextField renders correctly > with date type 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="date"
         value=""
       />
@@ -306,7 +292,6 @@ exports[`TextField renders correctly > with date-time type 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -332,7 +317,6 @@ exports[`TextField renders correctly > with date-time type 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="datetime-local"
         value=""
       />
@@ -345,7 +329,6 @@ exports[`TextField renders correctly > with email type 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -371,7 +354,6 @@ exports[`TextField renders correctly > with email type 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="email"
         value=""
       />
@@ -384,7 +366,6 @@ exports[`TextField renders correctly > with icon 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -410,7 +391,6 @@ exports[`TextField renders correctly > with icon 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -443,7 +423,6 @@ exports[`TextField renders correctly > with iconLabel and secondaryIconLabel 1`]
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -469,7 +448,6 @@ exports[`TextField renders correctly > with iconLabel and secondaryIconLabel 1`]
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -482,7 +460,6 @@ exports[`TextField renders correctly > with id 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -508,7 +485,6 @@ exports[`TextField renders correctly > with id 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -521,7 +497,6 @@ exports[`TextField renders correctly > with labelIconName 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -547,7 +522,6 @@ exports[`TextField renders correctly > with labelIconName 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -560,7 +534,6 @@ exports[`TextField renders correctly > with large size 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -586,7 +559,6 @@ exports[`TextField renders correctly > with large size 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -599,7 +571,6 @@ exports[`TextField renders correctly > with placeholder 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -625,7 +596,6 @@ exports[`TextField renders correctly > with placeholder 1`] = `
         placeholder="placeholder"
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -664,7 +634,6 @@ exports[`TextField renders correctly > with role 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -677,7 +646,6 @@ exports[`TextField renders correctly > with secondaryIconName 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -703,7 +671,6 @@ exports[`TextField renders correctly > with secondaryIconName 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -736,7 +703,6 @@ exports[`TextField renders correctly > with showCharCount 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -762,7 +728,6 @@ exports[`TextField renders correctly > with showCharCount 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -793,7 +758,6 @@ exports[`TextField renders correctly > with tel type 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -819,7 +783,6 @@ exports[`TextField renders correctly > with tel type 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="tel"
         value=""
       />
@@ -832,7 +795,6 @@ exports[`TextField renders correctly > with url type 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -858,7 +820,6 @@ exports[`TextField renders correctly > with url type 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="url"
         value=""
       />
@@ -871,7 +832,6 @@ exports[`TextField renders correctly > with validation 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -898,7 +858,6 @@ exports[`TextField renders correctly > with validation 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />
@@ -922,7 +881,6 @@ exports[`TextField renders correctly > with value 1`] = `
 <div
   aria-busy={false}
   className="textField"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -948,7 +906,6 @@ exports[`TextField renders correctly > with value 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value="value"
       />
@@ -961,7 +918,6 @@ exports[`TextField renders correctly > with wrapperClassName 1`] = `
 <div
   aria-busy={false}
   className="textField testClassName"
-  role=""
 >
   <div
     className="labelWrapper"
@@ -987,7 +943,6 @@ exports[`TextField renders correctly > with wrapperClassName 1`] = `
         placeholder=""
         readOnly={false}
         required={false}
-        role=""
         type="text"
         value=""
       />

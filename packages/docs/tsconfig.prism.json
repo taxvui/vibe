@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": { "noEmit": true },
+  "include": ["src/prism/**/*", "src/prism-env.d.ts", "../core/src/prism/**/*"]
+}

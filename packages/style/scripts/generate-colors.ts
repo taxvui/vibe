@@ -86,6 +86,8 @@ function flattenThemeToRoot(css: string, themePatterns: string[]): string {
   const allVariables: string[] = [];
 
   ast.walkRules(rule => {
+    // Opt-in Prism scopes must not override the legacy palettes being flattened.
+    if (rule.selector.includes("[data-vibe-prism")) return;
     const isThemeRule = themePatterns.some(pattern => rule.selector.includes(pattern));
 
     rule.walkDecls(decl => {

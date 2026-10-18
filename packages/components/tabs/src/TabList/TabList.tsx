@@ -121,7 +121,11 @@ const TabList: FC<TabListProps> = forwardRef(
     const getItemByIndex = useCallback((index: number): ReactElement<TabProps> => children[index], [children]);
     const disabledIndexes = useMemo(() => Array.from(disabledTabIds), [disabledTabIds]);
     const ulRef = useRef();
-    const { activeIndex: focusIndex, onSelectionAction } = useGridKeyboardNavigation({
+    const {
+      activeIndex: focusIndex,
+      onSelectionAction,
+      onFocusAction
+    } = useGridKeyboardNavigation({
       ref: ulRef,
       numberOfItemsInLine: children?.length,
       itemsCount: children?.length,
@@ -172,7 +176,15 @@ const TabList: FC<TabListProps> = forwardRef(
         id={id}
         data-testid={dataTestId || getTestId(ComponentDefaultTestId.TAB_LIST, id)}
       >
-        <ul ref={ulRef} className={cx(styles.tabsList, [getStyle(styles, size)])} role="tablist">
+        <ul
+          ref={ulRef}
+          className={cx(styles.tabsList, [getStyle(styles, size)])}
+          role="tablist"
+          onFocusCapture={event => {
+            const index = Object.keys(tabRefs.current).find(key => tabRefs.current[Number(key)] === event.target);
+            if (index !== undefined) onFocusAction(Number(index));
+          }}
+        >
           {tabsToRender}
         </ul>
       </div>

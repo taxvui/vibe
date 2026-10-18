@@ -112,6 +112,7 @@ const preview: Preview = {
       storySort: {
         method: "alphabetical",
         order: [
+          "Prism",
           "Welcome",
           "Getting Started",
           "Catalog",
