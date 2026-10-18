@@ -1,0 +1,296 @@
+.prism-documentation {
+  --sb-primary-background-color: var(--prism-background);
+  --sb-secondary-background-color: var(--prism-card);
+  --sb-primary-text-color: var(--prism-foreground);
+  --sb-secondary-text-color: var(--prism-muted-foreground);
+  --sb-layout-border-color: var(--prism-border);
+  --sb-link-color: var(--prism-primary);
+  --sb-title-font-family: var(--prism-font-sans);
+  min-height: 100vh;
+  background: var(--prism-background);
+  color: var(--prism-foreground);
+  font-family: var(--prism-font-sans);
+  line-height: 1.65;
+  text-align: start;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  a {
+    color: var(--prism-primary);
+    text-underline-offset: 4px;
+  }
+  :focus-visible {
+    outline: 2px solid var(--prism-ring);
+    outline-offset: 3px;
+  }
+  main {
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .sbdocs.sbdocs-wrapper {
+    padding: 48px 32px 64px;
+  }
+  .sbdocs.sbdocs-content {
+    color: var(--prism-foreground);
+    width: 100%;
+    min-width: 0;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .sbdocs h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+  }
+  .sbdocs h2 {
+    margin-top: 40px;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+  }
+  .sbdocs p,
+  .sbdocs li {
+    line-height: 1.7;
+  }
+  .sbdocs img,
+  .sbdocs video {
+    max-width: 100%;
+    height: auto;
+  }
+  .sbdocs pre {
+    max-width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  .sbdocs pre code {
+    display: block;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: transparent;
+    color: inherit;
+    line-height: 1.65;
+    white-space: pre-wrap;
+  }
+  .sbdocs code {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    color: var(--prism-foreground);
+    background: var(--prism-muted);
+    border-color: var(--prism-border);
+  }
+  .sbdocs table {
+    max-width: 100%;
+    table-layout: fixed;
+  }
+  .sbdocs th,
+  .sbdocs td {
+    overflow-wrap: anywhere;
+  }
+
+  .prism-docs-eyebrow {
+    font-size: var(--prism-text-xs);
+    letter-spacing: var(--prism-tracking-label);
+    font-weight: var(--prism-weight-bold);
+    color: var(--prism-muted-foreground);
+  }
+  .docblock-source {
+    color: var(--prism-foreground);
+    background: var(--prism-muted);
+    border-color: var(--prism-border);
+    [data-radix-scroll-area-viewport] > div {
+      display: block !important;
+      min-width: 0 !important;
+      width: 100%;
+    }
+    pre {
+      background: var(--prism-muted) !important;
+      color: var(--prism-foreground) !important;
+    }
+    pre,
+    pre * {
+      white-space: pre-wrap !important;
+      overflow-wrap: anywhere;
+    }
+    pre * {
+      color: inherit !important;
+      background: transparent !important;
+    }
+    .token.keyword,
+    .token.function,
+    .token.tag,
+    .token.property {
+      color: var(--prism-primary) !important;
+    }
+    button {
+      background: var(--prism-card);
+      color: var(--prism-foreground);
+      border-color: var(--prism-border);
+    }
+  }
+}
+.prism-docs-header,
+.prism-docs-footer {
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--prism-border);
+}
+.prism-docs-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px 24px;
+  align-items: center;
+  nav {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 24px;
+  }
+  nav a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    font-size: 14px;
+  }
+  button {
+    min-height: 44px;
+    padding: 8px 16px;
+    border: 1px solid var(--prism-border);
+    border-radius: var(--prism-radius-sm);
+    background: var(--prism-surface);
+    color: var(--prism-foreground);
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+  }
+}
+.prism-docs-brand {
+  font-size: 24px;
+  font-weight: 650;
+  text-decoration: none;
+  letter-spacing: -0.04em;
+  color: var(--prism-foreground) !important;
+  span {
+    font-weight: 400;
+    color: var(--prism-muted-foreground);
+  }
+}
+.prism-docs-footer {
+  border-top: 1px solid var(--prism-border);
+  border-bottom: 0;
+  font-size: 14px;
+  p {
+    margin: 8px 0;
+  }
+  a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+}
+.prism-docs-skip {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+  z-index: 20;
+  padding: 12px;
+  background: var(--prism-card);
+  transform: translateY(-200%);
+  &:focus {
+    transform: none;
+  }
+}
+.prism-docs-intro {
+  max-width: 720px;
+  font-size: 18px;
+  color: var(--prism-muted-foreground);
+}
+.prism-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+.prism-docs-card {
+  display: block;
+  padding: 24px;
+  border: 1px solid var(--prism-border);
+  border-radius: var(--prism-radius-lg);
+  background: var(--prism-card);
+  text-decoration: none;
+  h2 {
+    margin: 0 0 12px !important;
+    font-size: 22px;
+  }
+  p {
+    color: var(--prism-foreground);
+    margin-bottom: 0;
+  }
+  &:hover {
+    border-color: var(--prism-primary);
+  }
+}
+@media (max-width: 600px) {
+  .prism-documentation {
+    .sbdocs.sbdocs-wrapper {
+      padding: 28px 16px 40px;
+    }
+    .sbdocs.sbdocs-content {
+      min-width: 0;
+      margin: 0;
+    }
+    .sbdocs h1 {
+      font-size: 32px;
+    }
+    .sbdocs h2 {
+      font-size: 24px;
+    }
+    .sbdocs input,
+    .sbdocs select,
+    .sbdocs textarea {
+      font-size: 16px;
+    }
+    .sbdocs pre {
+      padding: 16px !important;
+    }
+  }
+  .prism-docs-header,
+  .prism-docs-footer {
+    padding: 16px;
+  }
+  .prism-docs-header nav {
+    gap: 0 16px;
+  }
+  .prism-docs-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.prism-docs-contents {
+  padding: 0 32px;
+  border-bottom: 1px solid var(--prism-border);
+  summary {
+    min-height: 44px;
+    padding-block: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  nav {
+    display: grid;
+    padding-bottom: 16px;
+    gap: 4px;
+  }
+  a {
+    padding-block: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .prism-docs-contents {
+    padding-inline: 16px;
+  }
+}
+
+/* Storybook's source viewport uses intrinsic table sizing. Wrap code without
+   clipping long commands, while retaining the built-in Copy action. */

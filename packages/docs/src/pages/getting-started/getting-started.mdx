@@ -1,11 +1,69 @@
-import { Meta, Markdown, Source } from "@storybook/blocks";
-import { Link } from "vibe-storybook-components";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import readme from "../../../../core/README.md?raw";
+import { Meta, Source } from "@storybook/blocks";
 
 <Meta title="Getting Started" />
 
-# Getting Started
+# Make it yours.
 
-<Markdown>{readme.replace(/^[\s\S]*?(?=## Overview)/, "")}</Markdown>
+<p className="prism-docs-intro">Start with the source. Build the existing workspace, then compose familiar components with Prism's shared theme and material primitives.</p>
+
+## 1. Set up the workspace
+
+Use the Node version in `.nvmrc` and Yarn Classic 1.22.22 through Corepack. Check out the design-system branch to include the Prism additions.
+
+<Source language="bash" code={`git clone https://github.com/taxvui/vibe.git
+cd vibe
+git checkout feat/prism-liquid-glass
+corepack enable
+corepack prepare yarn@1.22.22 --activate
+yarn install --frozen-lockfile
+yarn build:package @vibe/core
+yarn workspace vibe-storybook-components build
+yarn workspace @vibe/docs storybook`} />
+
+Open the local Storybook at `http://localhost:7008`. Start with **Prism → Design System → Light** or **Dark**.
+
+## 2. Compose a themed surface
+
+Use built workspace packages or their source in this fork. Import tokens once at your application boundary. The public npm release does not contain these additions; no Prism package has been published.
+
+<Source language="tsx" code={`import { Button, GlassSurface, PrismTheme } from "@vibe/core";
+import "@vibe/core/tokens";
+
+export function WorkspaceCard() {
+  return (
+    <PrismTheme mode="light">
+      <GlassSurface material="subtle" style={{ padding: "var(--prism-space-6)" }}>
+        <h2>Your next workspace</h2>
+        <Button kind="primary">Create workspace</Button>
+      </GlassSurface>
+    </PrismTheme>
+  );
+}`} />
+
+## 3. Customize the material
+
+Choose `clear`, `subtle`, `frosted`, `liquid` or `refractive`. The default is restrained; stronger effects are opt-in. Refractive currently uses the documented liquid fallback.
+
+Set `mode="dark"` for dark surfaces. Set `transparency="reduced"` on `PrismTheme` for opaque materials. Text and interactions remain functional without backdrop filtering.
+
+## 4. Set your brand
+
+Override the primary color, hover color, foreground and accent as a coordinated set. Keep the foreground readable in both themes and check contrast after changing a brand.
+
+<Source language="css" code={`.my-brand {
+  --prism-primary: #285e50;
+  --prism-primary-hover: #1c493e;
+  --prism-primary-foreground: #ffffff;
+  --prism-accent: #dcebe2;
+}`} />
+
+Apply `className="my-brand"` to `PrismTheme`. Explore the live showcase for working theme, material and accent controls.
+
+## 5. Verify a change
+
+<Source language="bash" code={`yarn workspace @vibe/docs test:prism
+yarn workspace @vibe/docs typecheck:prism
+yarn workspace @vibe/docs lint:prism
+NODE_OPTIONS=--max-old-space-size=6144 yarn workspace @vibe/docs build-storybook`} />
+
+The focused checks cover this milestone. The full inherited docs typecheck has documented baseline failures; see `docs/VERIFICATION.md`. Existing component APIs and their reference pages remain available in the sidebar.

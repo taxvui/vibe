@@ -66,3 +66,20 @@ The browser script now covers 320, 390, 430, 768 and 1440 px in both modes, plus
 Final follow-up results: all **10 light/dark viewport scenarios**, **3 mobile-manager scenarios**, opaque fallback and modal focus checks passed. Focused showcase tests: **6 passed**; Prism TypeScript, ESLint, recommended SCSS stylelint (with the repository's descending-specificity exception), production Storybook build, script syntax and diff whitespace checks passed. Existing production chunk-size warnings remain. Safari/Firefox and real mobile hardware were not tested.
 
 ![Mobile Storybook preview at 390 px](prism-preview-mobile.png)
+
+## Shared documentation follow-up — 2026-10-18
+
+Welcome and Getting Started now describe the independent Prism fork and its actual source-based setup. Existing MDX pages share a responsive token-based shell with theme controls, explicit documentation links, a keyboard-operable native table of contents and fork-specific footer. The old 640 px minimum content width no longer applies. Code wraps within the available width while keeping Storybook's Copy control; syntax colors use semantic tokens. The Catalog's Tipseen example now allows viewport-aware flipping/shifting and hides when its reference is outside view.
+
+Executed against the final production output:
+
+- `node scripts/prism-docs-browser-check.cjs`: **28 route/viewport checks passed** (Welcome, Getting Started, Catalog, MCP, Changelog, Migration Guide and Contributing at 320, 390, 768 and 1440 px), no page overflow or runtime errors; code-width assertions passed.
+- Welcome and Getting Started: **16 light/dark WCAG-tagged axe scans passed**. This does not certify every inherited component example or arbitrary custom theme.
+- Native table-of-contents anchor navigation and full mobile Storybook Welcome → Getting Started navigation passed.
+- Existing showcase browser suite: **10 light/dark viewport checks and 3 mobile manager checks passed**, plus opaque fallback and modal focus restoration.
+- Focused Prism tests: **6 passed**. Prism TypeScript, Prism ESLint, recommended SCSS stylelint and production Storybook build passed. Existing chunk-size warnings remain.
+- Direct lint of the inherited Tipseen description still reports its two unchanged import-dependency classifications (React and Floating UI); no dependency was added. The edited behavior passes lint with that existing rule excluded.
+
+Safari/Firefox, real mobile devices, a full inherited-docs accessibility audit and remote Chromatic comparison of this follow-up were not executed. The prior full-docs TypeScript baseline remains separate from the passing focused check.
+
+![Welcome mobile preview](prism-docs-mobile.png)

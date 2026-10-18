@@ -1,4 +1,5 @@
 import React from "react";
+import { themes } from "@storybook/theming";
 import { Preview } from "@storybook/react";
 import isChromatic from "chromatic/isChromatic";
 import { DocsContainer, DocsPage, Unstyled } from "@storybook/blocks";
@@ -40,11 +41,8 @@ import reactDocgenOutput from "../src/pages/playground/react-docgen-output.json"
 import withLiveEdit from "../src/decorators/withLiveEdit/withLiveEdit";
 import withPerformanceProfiler from "../src/decorators/withPerformanceProfiler/withPerformanceProfiler";
 import modes from "./modes";
-import Footer from "../src/layout/footer/Footer";
-import StorybookTableOfContents from "../src/layout/toc/TableOfContents";
+import PrismDocumentation from "../src/prism/PrismDocumentation";
 import { paintToConsole } from "./art";
-import FloatingObjects from "../src/pages/welcome/hero/FloatingObjects";
-import Vibe4Banner from "../src/pages/welcome/banner/Vibe4Banner";
 
 const fontLoader = async () => ({
   fonts: await document.fonts.ready // Fixing Chromatic tests flakiness - taking snapshots after fonts are loaded
@@ -67,18 +65,14 @@ const preview: Preview = {
         layout: "fullscreen"
       },
       container: ({ children, context }: { children: any; context: any }) => {
-        const isWelcomePage = typeof window !== "undefined" ? window.location.href.includes("id=welcome") : false;
-
         return (
-          <>
-            {isWelcomePage && <Vibe4Banner />}
-            {isWelcomePage && <FloatingObjects />}
-            <DocsContainer context={context}>
-              <Unstyled>{children}</Unstyled>
-            </DocsContainer>
-            <Footer />
-            <StorybookTableOfContents />
-          </>
+          <PrismDocumentation>
+            {mode => (
+              <DocsContainer context={context} theme={mode === "dark" ? themes.dark : themes.light}>
+                <Unstyled>{children}</Unstyled>
+              </DocsContainer>
+            )}
+          </PrismDocumentation>
         );
       },
       page: DocsPage,

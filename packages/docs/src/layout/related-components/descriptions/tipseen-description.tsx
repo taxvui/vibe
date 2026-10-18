@@ -27,7 +27,8 @@ export const TipseenDescription = () => {
     return (
       <div style={style}>
         <Tipseen
-          middleware={[shift({ mainAxis: false }), flip({ fallbackPlacements: [] })]}
+          middleware={[flip({ padding: 8 }), shift({ padding: 8, crossAxis: true })]}
+          hideWhenReferenceHidden
           width={280}
           position="right"
           content={
