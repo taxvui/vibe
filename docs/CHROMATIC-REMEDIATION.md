@@ -85,7 +85,7 @@ Chromatic build completes; do not accept them wholesale to hide errors.
 - Production Storybook build passed.
 - Fresh Catalog preview: **42 → 0 failing elements** with axe 4.10.3; light and
   dark both passed. Prism Light/Dark also passed (six story/theme combinations).
-- Focused package suites: **637 tests passed, 6 skipped** across 18 suites/packages,
+- Focused package suites: **639 tests passed, 6 skipped** across 18 suites/packages,
   including the Prism showcase and core primitives. Reviewed semantic snapshot
   changes were updated; Chromatic visual baselines were left unaccepted.
 - ESLint on changed library TypeScript: no errors, five existing warnings.
@@ -95,3 +95,18 @@ Chromatic build completes; do not accept them wholesale to hide errors.
   or removed errors. This legacy check is not reported as passing.
 - The full local baseline covered 528 light-mode stories, with 163 reporting
   violations. It is an inventory for the remaining work, not a green baseline.
+
+### Remote follow-up
+
+Chromatic build 6 completed 1,052 tests and reported 13 unreviewed changes. Its
+summary counts 1,052 changes because enabling accessibility created additional
+baselines; Chromatic itself carried forward 1,039 accepted baselines. The agent
+did not accept changes or configure `autoAcceptChanges`.
+
+The remote Catalog scan still found 15 prohibited labels on presentational
+swatches, despite the local axe 4.10.3 scan returning zero. The follow-up moves
+color names onto the actual option and delegates mouse selection there;
+listbox keyboard selection remains unchanged and is covered by a regression test.
+The local scanner now also checks named presentational div/span nodes directly,
+so that browser/rule-engine differences cannot give this case a false green.
+Remote results remain authoritative; a new run is required to verify this fix.

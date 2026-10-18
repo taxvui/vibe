@@ -166,4 +166,15 @@ describe("ColorPicker", () => {
     expect(contentByName).toBeNull();
     expect(expected).toBeTruthy();
   });
+  it("names the selectable option rather than its presentational swatch", () => {
+    const { getByRole } = render(<ColorPicker colorsList={["done-green"]} forceUseRawColorList />);
+    const option = getByRole("option", { name: "Done Green" });
+    expect(option.querySelector('[role="presentation"]').hasAttribute("aria-label")).toBe(false);
+  });
+  it("selects the active color once from the listbox keyboard handler", () => {
+    const onSave = vi.fn();
+    const { getByRole } = render(<ColorPicker colorsList={["done-green"]} forceUseRawColorList onSave={onSave} />);
+    fireEvent.keyDown(getByRole("listbox"), { key: "Enter" });
+    expect(onSave).toHaveBeenCalledTimes(1);
+  });
 });

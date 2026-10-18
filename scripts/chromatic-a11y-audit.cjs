@@ -58,6 +58,13 @@ if (!axeSource)
                 });
                 return {
                   version: axe.version,
+                  // Also check this DOM contract directly: Chromatic and local Chromium
+                  // can disagree about presentational nodes in the accessibility tree.
+                  domContractViolations: Array.from(
+                    document.querySelectorAll(
+                      'div[role="presentation"][aria-label], span[role="presentation"][aria-label], div[role="none"][aria-label], span[role="none"][aria-label]'
+                    )
+                  ).map(node => ({ rule: "named-presentational-element", html: node.outerHTML })),
                   violations: r.violations.map(v => ({
                     id: v.id,
                     impact: v.impact,
@@ -92,7 +99,9 @@ if (!axeSource)
     .split("\n")
     .filter(Boolean)
     .map(line => JSON.parse(line));
-  const failed = results.filter(result => result.error || result.errors?.length || result.violations?.length);
+  const failed = results.filter(
+    result => result.error || result.errors?.length || result.violations?.length || result.domContractViolations?.length
+  );
   console.log("DONE", completed, output, "failing stories:", failed.length);
   if (failed.length) process.exitCode = 1;
 })().catch(e => {

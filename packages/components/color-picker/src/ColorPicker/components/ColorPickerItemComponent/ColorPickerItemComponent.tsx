@@ -120,10 +120,14 @@ const ColorPickerItemComponent = forwardRef(
     const colorIndicatorWrapperStyle = shouldRenderIndicatorWithoutBackground ? { color: colorAsStyle } : {};
     return (
       <Tooltip content={tooltipContent}>
+        {/* Keyboard selection is delegated to the owning listbox via aria-activedescendant. */}
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
         <li
           id={id}
           role="option"
           aria-selected={isSelected}
+          aria-label={colorAriaLabel}
+          onClick={onClick}
           className={cx(styles.itemWrapper, {
             [styles.selectedColor]: isSelected,
             [styles.active]: isActive,
@@ -135,12 +139,10 @@ const ColorPickerItemComponent = forwardRef(
           <Clickable
             ref={itemRef}
             role="presentation"
-            aria-label={colorAriaLabel}
             className={cx(styles.colorItem, getStyle(styles, camelCase("color-item-size-" + colorSize)), {
               [styles.colorItemTextMode]: shouldRenderIndicatorWithoutBackground
             })}
             style={{ background: shouldRenderIndicatorWithoutBackground ? "transparent" : colorAsStyle }}
-            onClick={onClick}
             tabIndex={-1}
             onMouseDown={e => e.preventDefault()} // this is for quill to not lose the selection
           >

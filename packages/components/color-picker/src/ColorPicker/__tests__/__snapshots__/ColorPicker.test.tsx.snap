@@ -29,17 +29,18 @@ exports[`renders correctly with empty props 1`] = `
       tabIndex={0}
     >
       <li
+        aria-label="Grass Green"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_grass_green"
         id="color-picker-grid-0-item-0"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Grass Green"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -62,17 +63,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Done Green"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_done-green"
         id="color-picker-grid-0-item-1"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Done Green"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -95,17 +97,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Bright Green"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_bright-green"
         id="color-picker-grid-0-item-2"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Bright Green"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -128,17 +131,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Saladish"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_saladish"
         id="color-picker-grid-0-item-3"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Saladish"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -161,17 +165,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Egg Yolk"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_egg_yolk"
         id="color-picker-grid-0-item-4"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Egg Yolk"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -194,17 +199,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Working Orange"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_working_orange"
         id="color-picker-grid-0-item-5"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Working Orange"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -227,17 +233,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Dark Orange"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_dark-orange"
         id="color-picker-grid-0-item-6"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Dark Orange"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -260,17 +267,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Peach"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_peach"
         id="color-picker-grid-0-item-7"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Peach"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -293,17 +301,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Sunset"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_sunset"
         id="color-picker-grid-0-item-8"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Sunset"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -326,17 +335,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Stuck Red"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_stuck-red"
         id="color-picker-grid-0-item-9"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Stuck Red"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -359,17 +369,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Dark Red"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_dark-red"
         id="color-picker-grid-0-item-10"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Dark Red"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -392,17 +403,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Sofia Pink"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_sofia_pink"
         id="color-picker-grid-0-item-11"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Sofia Pink"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -425,17 +437,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Lipstick"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_lipstick"
         id="color-picker-grid-0-item-12"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Lipstick"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -458,17 +471,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Bubble"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_bubble"
         id="color-picker-grid-0-item-13"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Bubble"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -491,17 +505,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Purple"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_purple"
         id="color-picker-grid-0-item-14"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Purple"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -524,17 +539,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Dark Purple"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_dark_purple"
         id="color-picker-grid-0-item-15"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Dark Purple"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -557,17 +573,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Berry"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_berry"
         id="color-picker-grid-0-item-16"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Berry"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -590,17 +607,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Dark Indigo"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_dark_indigo"
         id="color-picker-grid-0-item-17"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Dark Indigo"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -623,17 +641,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Indigo"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_indigo"
         id="color-picker-grid-0-item-18"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Indigo"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -656,17 +675,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Navy"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_navy"
         id="color-picker-grid-0-item-19"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Navy"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -689,17 +709,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Bright Blue"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_bright-blue"
         id="color-picker-grid-0-item-20"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Bright Blue"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -722,17 +743,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Dark Blue"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_dark-blue"
         id="color-picker-grid-0-item-21"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Dark Blue"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -755,17 +777,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Aquamarine"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_aquamarine"
         id="color-picker-grid-0-item-22"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Aquamarine"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -788,17 +811,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Chili Blue"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_chili-blue"
         id="color-picker-grid-0-item-23"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Chili Blue"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -821,17 +845,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="River"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_river"
         id="color-picker-grid-0-item-24"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="River"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -854,17 +879,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Winter"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_winter"
         id="color-picker-grid-0-item-25"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Winter"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -887,17 +913,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Explosive"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_explosive"
         id="color-picker-grid-0-item-26"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Explosive"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -920,17 +947,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="American Gray"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_american_gray"
         id="color-picker-grid-0-item-27"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="American Gray"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -953,17 +981,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Blackish"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_blackish"
         id="color-picker-grid-0-item-28"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Blackish"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -986,17 +1015,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Brown"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_brown"
         id="color-picker-grid-0-item-29"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Brown"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -1019,17 +1049,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Orchid"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_orchid"
         id="color-picker-grid-0-item-30"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Orchid"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -1052,17 +1083,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Tan"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_tan"
         id="color-picker-grid-0-item-31"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Tan"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -1085,17 +1117,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Sky"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_sky"
         id="color-picker-grid-0-item-32"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Sky"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -1118,17 +1151,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Coffee"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_coffee"
         id="color-picker-grid-0-item-33"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Coffee"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -1151,17 +1185,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Royal"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_royal"
         id="color-picker-grid-0-item-34"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Royal"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -1184,17 +1219,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Teal"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_teal"
         id="color-picker-grid-0-item-35"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Teal"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -1217,17 +1253,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Lavender"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_lavender"
         id="color-picker-grid-0-item-36"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Lavender"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -1250,17 +1287,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Steel"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_steel"
         id="color-picker-grid-0-item-37"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Steel"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -1283,17 +1321,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Lilac"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_lilac"
         id="color-picker-grid-0-item-38"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Lilac"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
@@ -1316,17 +1355,18 @@ exports[`renders correctly with empty props 1`] = `
         </div>
       </li>
       <li
+        aria-label="Pecan"
         aria-selected={false}
         className="itemWrapper"
         data-testid="color-picker-item_pecan"
         id="color-picker-grid-0-item-39"
+        onClick={[Function]}
         role="option"
       >
         <div
           className="feedbackIndicator"
         />
         <div
-          aria-label="Pecan"
           className="clickable colorItem colorItemSizeMedium disableTextSelection"
           data-testid="clickable"
           onClick={[Function]}
