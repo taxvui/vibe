@@ -1,0 +1,81 @@
+name: Dependency security verification
+on:
+  push:
+    branches: [fix/dependency-security]
+  pull_request:
+    paths:
+      - 'package.json'
+      - 'yarn.lock'
+      - '.nvmrc'
+      - 'packages/**/package.json'
+      - 'packages/**/rollup.config.*'
+      - 'scripts/check-security-audit*'
+      - '.github/workflows/dependency-security.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      SKIP_RELEASE_ARTIFACTS: 'true'
+      NX_DAEMON: 'false'
+      NODE_OPTIONS: --max-old-space-size=6144
+      STORYBOOK_DISABLE_TELEMETRY: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: corepack enable && corepack prepare yarn@1.22.22 --activate
+      - name: Install locked dependencies
+        run: yarn install --frozen-lockfile --ignore-scripts --non-interactive --network-timeout 30000 2>&1 | tee security-install.log
+      - name: Record remaining advisories
+        if: always()
+        run: yarn audit --json > security-audit.jsonl || true
+      - name: Test audit gate
+        run: node --test scripts/check-security-audit.test.cjs
+      - name: Check audit result and lockfile
+        run: |
+          node scripts/check-security-audit.cjs security-audit.jsonl
+          git diff --exit-code -- yarn.lock
+      - name: Build core and dependencies
+        run: |
+          yarn build:package @vibe/core
+          test -s packages/components/button/dist/index.d.ts
+          test -s packages/icons/dist/react/index.d.ts
+          test -s packages/core/dist/index.d.ts
+      - name: Build documentation blocks
+        run: yarn workspace vibe-storybook-components build
+      - name: Verify temporary file API compatibility
+        run: |
+          node - <<'JS'
+          const { createRequire } = require("node:module");
+          const assert = require("node:assert/strict");
+          const fs = require("node:fs");
+          const editorRequire = createRequire(require.resolve("external-editor/package.json"));
+          const tmp = editorRequire("tmp");
+          const file = tmp.fileSync();
+          try {
+            assert.ok(fs.existsSync(file.name));
+            fs.writeFileSync(file.name, "security compatibility check");
+            assert.equal(fs.readFileSync(file.name, "utf8"), "security compatibility check");
+          } finally {
+            file.removeCallback();
+          }
+          assert.equal(fs.existsSync(file.name), false);
+          JS
+      - name: Test Button
+        run: yarn workspace @vibe/button test
+      - name: Build Storybook
+        run: yarn workspace @vibe/docs build-storybook
+      - name: Upload security verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-security-results
+          path: |
+            yarn.lock
+            security-audit.jsonl
+            security-install.log

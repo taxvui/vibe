@@ -3,7 +3,7 @@ import nodeResolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
-import { terser } from "rollup-plugin-terser";
+import terser from "@rollup/plugin-terser";
 import postcss from "rollup-plugin-postcss";
 import postCssImport from "postcss-import";
 import autoprefixer from "autoprefixer";
@@ -130,6 +130,7 @@ export default {
       extensions: [...EXTENSIONS, ".json", ".css"]
     }),
     typescript({
+      include: ["**/*.ts", "**/*.tsx"],
       tsconfigOverride: {
         exclude: ["**/__tests__", "**/__stories__", path.join(SRC_PATH, "storybook")]
       }

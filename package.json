@@ -13,7 +13,7 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.2.0",
     "bytes": "^3.1.2",
-    "lerna": "^8.1.2",
+    "lerna": "^10.1.1",
     "size-limit": "^11.2.0",
     "typescript": "^5.9.3"
   },
@@ -21,5 +21,14 @@
     "packages/*",
     "packages/components/*"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || ^26.0.0"
+  },
+  "resolutions": {
+    "@types/parse-path": "7.0.3",
+    "**/nx/undici": "^7.29.1",
+    "**/external-editor/tmp": "^0.2.6"
+  }
 }

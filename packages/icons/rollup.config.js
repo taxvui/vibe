@@ -1,6 +1,6 @@
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "rollup-plugin-typescript2";
-import { terser } from "rollup-plugin-terser";
+import terser from "@rollup/plugin-terser";
 import svg from "rollup-plugin-svg";
 
 export default {
@@ -15,5 +15,5 @@ export default {
     format: "esm"
   },
   external: [/node_modules/],
-  plugins: [resolve(), typescript(), terser(), svg()]
+  plugins: [resolve(), typescript({ include: ["**/*.ts", "**/*.tsx"] }), terser(), svg()]
 };
