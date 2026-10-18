@@ -34,4 +34,12 @@ describe("avatar", () => {
     fireEvent.click(button);
     expect(onClick).not.toHaveBeenCalled();
   });
+  it("passes a meaningful icon label to the SVG", () => {
+    const { getByRole } = renderComponent({
+      type: "icon",
+      icon: props => <svg {...props} />,
+      "aria-label": "Team member"
+    });
+    expect(getByRole("img", { name: "Team member" })).toBeTruthy();
+  });
 });

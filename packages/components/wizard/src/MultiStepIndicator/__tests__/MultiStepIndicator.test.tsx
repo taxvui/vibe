@@ -37,8 +37,8 @@ describe("MultiStepIndicator tests", () => {
     const { getAllByRole } = render(
       <MultiStepIndicator
         steps={[
-          { status: "active", titleText: "Details" },
-          { status: "pending", titleText: "Review" }
+          { status: "active", titleText: "Details", subtitleText: "" },
+          { status: "pending", titleText: "Review", subtitleText: "" }
         ]}
         onClick={onClick}
       />

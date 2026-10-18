@@ -73,7 +73,7 @@ const AvatarContent = ({
       return (
         <Icon
           icon={icon}
-          aria-label={ariaLabel}
+          label={ariaLabel}
           className={className}
           aria-hidden={!ariaLabel}
           id={id}

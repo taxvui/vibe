@@ -85,7 +85,7 @@ Chromatic build completes; do not accept them wholesale to hide errors.
 - Production Storybook build passed.
 - Fresh Catalog preview: **42 → 0 failing elements** with axe 4.10.3; light and
   dark both passed. Prism Light/Dark also passed (six story/theme combinations).
-- Focused package suites: **636 tests passed, 6 skipped** across 18 suites/packages,
+- Focused package suites: **637 tests passed, 6 skipped** across 18 suites/packages,
   including the Prism showcase and core primitives. Reviewed semantic snapshot
   changes were updated; Chromatic visual baselines were left unaccepted.
 - ESLint on changed library TypeScript: no errors, five existing warnings.
