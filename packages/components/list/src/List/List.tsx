@@ -134,7 +134,7 @@ const List = forwardRef(
 
     useEffect(() => {
       const selectedItemIndex = childrenRefs.current.findIndex(
-        child => child instanceof HTMLElement && isListItem(child) && child?.getAttribute("aria-selected") === "true"
+        child => child instanceof HTMLElement && isListItem(child) && child?.getAttribute("data-selected") === "true"
       );
       if (selectedItemIndex !== -1) {
         updateFocusedItem(getListItemIdByIndex(childrenRefs, selectedItemIndex));
@@ -144,7 +144,7 @@ const List = forwardRef(
           updateFocusedItem(getListItemIdByIndex(childrenRefs, firstFocusableIndex));
         }
       }
-    }, [updateFocusedItem]);
+    }, [updateFocusedItem, overrideId]);
 
     const overrideChildren = useMemo(() => {
       let override: ReactElement | ReactElement[] = Array.isArray(children) ? children : [children];

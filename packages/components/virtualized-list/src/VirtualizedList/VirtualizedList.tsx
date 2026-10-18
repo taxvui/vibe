@@ -39,6 +39,13 @@ import {
   type VirtualizedListScrollDirection
 } from "./VirtualizedList.types";
 
+const FocusableListViewport = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => (
+  // Scroll containers must be focusable for native keyboard scrolling (WCAG 2.1.1).
+  // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+  <div {...props} ref={ref} role="group" tabIndex={0} />
+));
+FocusableListViewport.displayName = "FocusableListViewport";
+
 export interface VirtualizedListProps extends VibeComponentProps {
   /**
    * Class name applied to the scrollable container.
@@ -389,6 +396,7 @@ const VirtualizedList = forwardRef(
             updateListSize(width, height);
             return (
               <List
+                outerElementType={FocusableListViewport}
                 ref={mergedListRef as unknown as LegacyRef<VariableSizeList<unknown>>}
                 height={height}
                 width={width}

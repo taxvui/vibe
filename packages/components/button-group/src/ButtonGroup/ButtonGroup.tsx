@@ -161,6 +161,7 @@ const ButtonGroup = forwardRef(
             rightIcon={option.icon}
             leftIcon={option.leftIcon}
             active={isSelected}
+            disabled={disabled || option.disabled}
             rightFlat={index !== options.length - 1}
             leftFlat={index !== 0}
             kind="tertiary"

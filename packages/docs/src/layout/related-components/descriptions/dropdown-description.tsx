@@ -14,7 +14,7 @@ export const DropdownDescription = () => {
     ];
     return (
       <div style={style}>
-        <Dropdown placeholder="Placeholder text here" size="medium" options={options} />
+        <Dropdown aria-label="Choose an option" placeholder="Placeholder text here" size="medium" options={options} />
       </div>
     );
   }, []);

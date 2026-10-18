@@ -6,7 +6,7 @@ export const DialogContentContainerDescription = () => {
   const component = useMemo(() => {
     return (
       <div style={{ width: "200px" }}>
-        <DialogContentContainer>
+        <DialogContentContainer role={null}>
           <Text ellipsis={false}>A content section within an elevated dialog content container</Text>
         </DialogContentContainer>
       </div>

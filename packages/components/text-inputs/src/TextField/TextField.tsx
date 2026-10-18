@@ -433,9 +433,15 @@ const TextField = forwardRef(
                     [styles.iconContainerActive]: isPrimary,
                     [styles.iconContainerClickable]: isIconContainerClickable
                   })}
+                  role={isIconContainerClickable ? "button" : primaryIconAriaLabel ? "img" : "presentation"}
+                  disabled={disabled}
                   onClick={onIconClickCallback}
                   tabIndex={shouldFocusOnPrimaryIcon ? 0 : -1}
-                  aria-label={primaryIconAriaLabel}
+                  aria-label={
+                    isIconContainerClickable
+                      ? primaryIconAriaLabel || (clearOnIconClick ? "Clear input" : undefined)
+                      : primaryIconAriaLabel
+                  }
                 >
                   <Icon
                     icon={iconName}
@@ -458,10 +464,16 @@ const TextField = forwardRef(
                     [styles.iconContainerActive]: isSecondary,
                     [styles.iconContainerClickable]: isIconContainerClickable
                   })}
+                  role={isIconContainerClickable ? "button" : secondaryIconAriaLabel ? "img" : "presentation"}
+                  disabled={disabled}
                   onClick={onIconClickCallback}
                   tabIndex={shouldFocusOnSecondaryIcon ? 0 : -1}
                   data-testid={secondaryDataTestId || getTestId(ComponentDefaultTestId.TEXT_FIELD_SECONDARY_BUTTON, id)}
-                  aria-label={secondaryIconAriaLabel}
+                  aria-label={
+                    isIconContainerClickable
+                      ? secondaryIconAriaLabel || (clearOnIconClick ? "Clear input" : undefined)
+                      : secondaryIconAriaLabel
+                  }
                 >
                   <Icon
                     icon={secondaryIconName}

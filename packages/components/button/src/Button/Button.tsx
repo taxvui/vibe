@@ -61,6 +61,8 @@ export interface ButtonProps extends VibeComponentProps {
   "aria-labelledby"?: string;
   /** aria label to provide important when providing only Icon */
   "aria-label"?: string;
+  /** Semantic role when composing a button into an accessible widget. */
+  role?: React.AriaRole;
   /** aria for a button popup */
   "aria-haspopup"?: React.HTMLProps<HTMLButtonElement>["aria-haspopup"];
   /** aria to be set if the popup is open */
@@ -101,6 +103,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       kind = "primary",
       onClick = NOOP,
       name,
+      role,
       size = "medium",
       color = "primary",
       disabled = false,
@@ -237,6 +240,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       const props: Record<string, unknown> = {
         ref: mergedRef,
         type,
+        role,
         className: classNames,
         name,
         onMouseUp,
@@ -263,6 +267,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       return props;
     }, [
       mergedRef,
+      role,
       type,
       classNames,
       name,

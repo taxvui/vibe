@@ -13,6 +13,7 @@ const BaseInput = forwardRef(
       success,
       error,
       wrapperRole,
+      wrapperAriaLabel,
       inputRole,
       className,
       inputClassName,
@@ -34,7 +35,7 @@ const BaseInput = forwardRef(
     );
 
     return (
-      <div className={wrapperClassNames} role={wrapperRole}>
+      <div className={wrapperClassNames} role={wrapperRole} aria-label={wrapperAriaLabel}>
         {renderLeft}
         <input
           {...props}

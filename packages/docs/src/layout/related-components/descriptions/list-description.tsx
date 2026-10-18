@@ -6,8 +6,8 @@ export const ListDescription = () => {
   const component = useMemo(() => {
     return (
       <div>
-        <DialogContentContainer>
-          <List>
+        <DialogContentContainer role={null}>
+          <List aria-label="Available actions">
             <ListItem>List item 1</ListItem>
             <ListItem>List item 2</ListItem>
             <ListItem>List item 3</ListItem>

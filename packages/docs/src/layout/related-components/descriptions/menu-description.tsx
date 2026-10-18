@@ -7,7 +7,7 @@ export const MenuDescription = () => {
   const component = useMemo(() => {
     return (
       <div>
-        <DialogContentContainer>
+        <DialogContentContainer role={null}>
           <Menu size="small">
             <MenuItem title="Send" icon={Email} />
             <MenuItem title="Delete" icon={Delete} />

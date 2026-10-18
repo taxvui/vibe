@@ -26,7 +26,6 @@ exports[`Snapshots > renders correctly with children 1`] = `
     </label>
   </div>
   <li
-    aria-selected={true}
     className="typography primary start singleLineEllipsis text text2Normal item focused initialSelected"
     data-testid="menu-item_1"
     id="menu-2-item-1"
@@ -49,7 +48,6 @@ exports[`Snapshots > renders correctly with children 1`] = `
     />
   </li>
   <li
-    aria-selected={false}
     className="typography primary start singleLineEllipsis text text2Normal item initialSelected"
     data-testid="menu-item_2"
     id="menu-2-item-2"

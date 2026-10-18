@@ -210,11 +210,11 @@ const Avatar = ({
   const clickHandler = useCallback(
     (event: React.MouseEvent | React.KeyboardEvent) => {
       event.preventDefault();
-      if (onClick) {
+      if (onClick && !disabled) {
         onClick(event, id);
       }
     },
-    [onClick, id]
+    [onClick, id, disabled]
   );
 
   return (
@@ -229,7 +229,9 @@ const Avatar = ({
         isClickable={!!onClick}
         clickableProps={{
           onClick: clickHandler,
-          tabIndex: -1,
+          tabIndex: overrideTabIndex,
+          disabled,
+          "aria-label": ariaLabel || (typeof tooltipProps?.content === "string" ? tooltipProps.content : text),
           className: styles.clickableWrapper
         }}
       >
@@ -246,7 +248,7 @@ const Avatar = ({
               avatarContentWrapperClassName
             )}
             aria-hidden={ariaHidden}
-            tabIndex={overrideTabIndex}
+            tabIndex={onClick ? -1 : overrideTabIndex}
             style={{ ...backgroundColorStyle }}
           >
             <AvatarContent

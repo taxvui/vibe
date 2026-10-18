@@ -21,7 +21,7 @@ const menuGridItemTemplate = (args: MenuGridItemProps) => (
     <MenuItem title="This is a menu button" />
     <MenuTitle caption="Try keyboard navigation :)" />
     <MenuGridItem {...args}>
-      <DummyNavigableGrid itemsCount={8} numberOfItemsInLine={3} withoutBorder />
+      <DummyNavigableGrid itemRole="menuitem" itemsCount={8} numberOfItemsInLine={3} withoutBorder />
     </MenuGridItem>
   </Menu>
 );
@@ -37,12 +37,18 @@ export const WithDisabledStates = {
       <Menu>
         <MenuTitle caption="This grid has disabled items" />
         <MenuGridItem>
-          <DummyNavigableGrid itemsCount={4} numberOfItemsInLine={2} disabledIndexes={[2]} withoutBorder />
+          <DummyNavigableGrid
+            itemRole="menuitem"
+            itemsCount={4}
+            numberOfItemsInLine={2}
+            disabledIndexes={[2]}
+            withoutBorder
+          />
         </MenuGridItem>
         <MenuItem title="I'm a regular item" />
         <MenuTitle caption="The grid below is disabled entirely" />
         <MenuGridItem disabled>
-          <DummyNavigableGrid itemsCount={4} numberOfItemsInLine={2} withoutBorder />
+          <DummyNavigableGrid itemRole="menuitem" itemsCount={4} numberOfItemsInLine={2} withoutBorder />
         </MenuGridItem>
       </Menu>
     </DialogContentContainer>
@@ -62,13 +68,13 @@ export const InsideSubMenus = {
               <MenuItem icon={Feedback} title="More info" />
               <MenuTitle caption="1st level grid item" />
               <MenuGridItem>
-                <DummyNavigableGrid itemsCount={6} numberOfItemsInLine={3} withoutBorder />
+                <DummyNavigableGrid itemRole="menuitem" itemsCount={6} numberOfItemsInLine={3} withoutBorder />
               </MenuGridItem>
               <MenuItem icon={Code} title="Hover me to see the sub menu">
                 <Menu>
                   <MenuTitle caption="2nd level grid item" />
                   <MenuGridItem>
-                    <DummyNavigableGrid itemsCount={6} numberOfItemsInLine={3} withoutBorder />
+                    <DummyNavigableGrid itemRole="menuitem" itemsCount={6} numberOfItemsInLine={3} withoutBorder />
                   </MenuGridItem>
                   <MenuItem icon={Invite} title="Another sub sub item" />
                   <MenuItem icon={Settings} title="More sub sub items" />

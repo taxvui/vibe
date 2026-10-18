@@ -118,13 +118,13 @@ export const MenuWithGridItemsAndSubMenu = {
               <MenuItem icon={Feedback} title="More info" />
               <MenuTitle caption="1st level grid item" />
               <MenuGridItem>
-                <DummyNavigableGrid itemsCount={6} numberOfItemsInLine={3} withoutBorder />
+                <DummyNavigableGrid itemRole="menuitem" itemsCount={6} numberOfItemsInLine={3} withoutBorder />
               </MenuGridItem>
               <MenuItem icon={Code} title="With Sub menu">
                 <Menu>
                   <MenuTitle caption="2nd level grid item" />
                   <MenuGridItem>
-                    <DummyNavigableGrid itemsCount={6} numberOfItemsInLine={3} withoutBorder />
+                    <DummyNavigableGrid itemRole="menuitem" itemsCount={6} numberOfItemsInLine={3} withoutBorder />
                   </MenuGridItem>
                   <MenuItem icon={Invite} title="Another sub sub item" />
                   <MenuItem icon={Settings} title="More sub sub items" />

@@ -22,10 +22,21 @@ interface DummyNavigableGridProps {
   disabled?: boolean;
   disabledIndexes?: number[];
   withoutBorder?: boolean;
+  itemRole?: React.AriaRole;
 }
-export const DummyNavigableGrid: React.ForwardRefExoticComponent<DummyNavigableGridProps & React.RefAttributes<HTMLElement>> = forwardRef(
+export const DummyNavigableGrid: React.ForwardRefExoticComponent<
+  DummyNavigableGridProps & React.RefAttributes<HTMLElement>
+> = forwardRef(
   (
-    { itemsCount, numberOfItemsInLine, itemPrefix = "", disabled = false, disabledIndexes = [], withoutBorder = false },
+    {
+      itemsCount,
+      numberOfItemsInLine,
+      itemPrefix = "",
+      disabled = false,
+      disabledIndexes = [],
+      withoutBorder = false,
+      itemRole
+    },
     ref: RefObject<HTMLDivElement>
   ) => {
     const width = useMemo(() => numberOfItemsInLine * ELEMENT_WIDTH_PX + 2 * PADDING_PX, [numberOfItemsInLine]);
@@ -45,12 +56,14 @@ export const DummyNavigableGrid: React.ForwardRefExoticComponent<DummyNavigableG
         className={cx("use-grid-keyboard-dummy-grid-wrapper", { "without-border": withoutBorder })}
         style={{ width }}
         data-disabled={disabled}
+        role={itemRole === "menuitem" ? "group" : undefined}
         ref={ref}
         tabIndex={-1}
       >
         {items.map((item, index) => (
           <Button
             key={item}
+            role={itemRole}
             kind="secondary"
             onClick={onClickByIndex(index)}
             disabled={disabled || disabledIndexes?.includes(index)}

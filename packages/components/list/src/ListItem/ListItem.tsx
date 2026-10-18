@@ -138,8 +138,13 @@ const ListItem = forwardRef(
         })}
         id={id}
         type="text2"
+        data-selected={selected || undefined}
         aria-disabled={disabled}
-        aria-selected={selected}
+        aria-selected={
+          role === "option" || role === "treeitem" || role === "tab" || role === "row" || role === "gridcell"
+            ? selected
+            : undefined
+        }
         onClick={componentOnClick}
         onMouseEnter={componentOnHover}
         onFocus={componentOnHover}

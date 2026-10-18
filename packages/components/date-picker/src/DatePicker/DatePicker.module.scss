@@ -113,8 +113,8 @@
         background: var(--primary-background-hover-color);
       }
 
-      &.datePickerDayOutside {
-        color: var(--disabled-text-color);
+      &.datePickerDayOutside:not(.datePickerDayDisabled) {
+        color: var(--secondary-text-color);
       }
 
       &.datePickerDaySelected:not(.datePickerDayRangeMiddle):not(.datePickerRemoveFromRange) {

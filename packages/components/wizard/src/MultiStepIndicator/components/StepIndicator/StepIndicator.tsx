@@ -174,7 +174,11 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
 
   useKeyEvent({
     keys: KEYS,
-    callback: handleClick,
+    callback: (event: KeyboardEvent) => {
+      event.preventDefault();
+      event.stopPropagation();
+      handleClick();
+    },
     ref: componentRef
   });
 
@@ -207,12 +211,12 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
     <Clickable
       tabIndex={-1}
       elementType="li"
+      role="listitem"
       className={cx(...getClassNamesWithSuffix(""), stepComponentClassName, {
         [styles.withAnimation]: statusChangeAnimationState,
         [styles.clickable]: onClick,
         [styles.textPlacementVertical]: isVertical
       })}
-      aria-label={ariaLabel}
       onClick={handleClick}
       data-testid={dataTestId || getTestId(ComponentDefaultTestId.STEP_INDICATOR, id)}
     >
@@ -222,6 +226,7 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
           ref={componentRef}
           tabIndex={0}
           role="button"
+          aria-label={ariaLabel}
         >
           <SwitchTransition mode="out-in">
             <CSSTransition

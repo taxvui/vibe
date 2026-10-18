@@ -17,7 +17,7 @@ export const DialogDescription = () => {
           position="right"
           moveBy={{ main: 2, secondary: 0 }}
           content={
-            <DialogContentContainer>
+            <DialogContentContainer aria-label="Details preview">
               <Flex
                 direction="column"
                 align="start"
@@ -35,7 +35,7 @@ export const DialogDescription = () => {
             </DialogContentContainer>
           }
         >
-          <IconButton icon={Info} active kind="secondary" />
+          <IconButton aria-label="Show details" icon={Info} active kind="secondary" />
         </Dialog>
       </div>
     );

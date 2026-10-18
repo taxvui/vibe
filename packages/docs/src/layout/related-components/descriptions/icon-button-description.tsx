@@ -4,7 +4,7 @@ import { IconButton } from "@vibe/core";
 import { Bolt } from "@vibe/icons";
 
 export const IconButtonDescription = () => {
-  const component = useMemo(() => <IconButton icon={Bolt} />, []);
+  const component = useMemo(() => <IconButton aria-label="Run action" icon={Bolt} />, []);
   return (
     <RelatedComponent
       component={component}

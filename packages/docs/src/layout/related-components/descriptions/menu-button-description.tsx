@@ -6,7 +6,7 @@ import { Sun, Moon, Favorite } from "@vibe/icons";
 export const MenuButtonDescription = () => {
   const component = useMemo(
     () => (
-      <MenuButton>
+      <MenuButton aria-label="More actions">
         <Menu id="menu" size="medium">
           <MenuItem icon={Sun} type="svg" title="The sun" />
           <MenuItem icon={Moon} type="svg" title="The moon" />

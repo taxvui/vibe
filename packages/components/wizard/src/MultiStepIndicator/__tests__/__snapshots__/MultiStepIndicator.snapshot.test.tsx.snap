@@ -6,7 +6,6 @@ exports[`MultiStepIndicator renders correctly > with className 1`] = `
   data-testid="multi-step-indicator"
 >
   <li
-    aria-label="Step 1: Title - Subtitle, status: fulfilled"
     className="clickable indicator typePrimary statusFulfilled sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -14,13 +13,14 @@ exports[`MultiStepIndicator renders correctly > with className 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusFulfilledNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 1: Title - Subtitle, status: fulfilled"
         className="numberContainer typePrimaryNumberContainer statusFulfilledNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -75,13 +75,22 @@ exports[`MultiStepIndicator renders correctly > with className 1`] = `
       </span>
     </div>
   </li>
-  <div
-    className="divider divider horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 2: Active - Active Subtitle, status: active"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusActive sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -89,13 +98,14 @@ exports[`MultiStepIndicator renders correctly > with className 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusActiveNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 2: Active - Active Subtitle, status: active"
         className="numberContainer typePrimaryNumberContainer statusActiveNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -134,13 +144,22 @@ exports[`MultiStepIndicator renders correctly > with className 1`] = `
       </span>
     </div>
   </li>
-  <div
-    className="divider divider horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 3: Pending - Pending Subtitle, status: pending"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusPending sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -148,13 +167,14 @@ exports[`MultiStepIndicator renders correctly > with className 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusPendingNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 3: Pending - Pending Subtitle, status: pending"
         className="numberContainer typePrimaryNumberContainer statusPendingNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -202,7 +222,6 @@ exports[`MultiStepIndicator renders correctly > with dividerComponentClassName 1
   data-testid="multi-step-indicator"
 >
   <li
-    aria-label="Step 1: Title - Subtitle, status: fulfilled"
     className="clickable indicator typePrimary statusFulfilled sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -210,13 +229,14 @@ exports[`MultiStepIndicator renders correctly > with dividerComponentClassName 1
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusFulfilledNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 1: Title - Subtitle, status: fulfilled"
         className="numberContainer typePrimaryNumberContainer statusFulfilledNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -271,13 +291,22 @@ exports[`MultiStepIndicator renders correctly > with dividerComponentClassName 1
       </span>
     </div>
   </li>
-  <div
-    className="divider divider test horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 2: Active - Active Subtitle, status: active"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider test horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusActive sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -285,13 +314,14 @@ exports[`MultiStepIndicator renders correctly > with dividerComponentClassName 1
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusActiveNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 2: Active - Active Subtitle, status: active"
         className="numberContainer typePrimaryNumberContainer statusActiveNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -330,13 +360,22 @@ exports[`MultiStepIndicator renders correctly > with dividerComponentClassName 1
       </span>
     </div>
   </li>
-  <div
-    className="divider divider test horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 3: Pending - Pending Subtitle, status: pending"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider test horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusPending sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -344,13 +383,14 @@ exports[`MultiStepIndicator renders correctly > with dividerComponentClassName 1
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusPendingNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 3: Pending - Pending Subtitle, status: pending"
         className="numberContainer typePrimaryNumberContainer statusPendingNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -405,7 +445,6 @@ exports[`MultiStepIndicator renders correctly > with fulfilledStepIcon 1`] = `
   data-testid="multi-step-indicator"
 >
   <li
-    aria-label="Step 1: Title - Subtitle, status: fulfilled"
     className="clickable indicator typePrimary statusFulfilled sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -413,13 +452,14 @@ exports[`MultiStepIndicator renders correctly > with fulfilledStepIcon 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusFulfilledNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 1: Title - Subtitle, status: fulfilled"
         className="numberContainer typePrimaryNumberContainer statusFulfilledNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -474,13 +514,22 @@ exports[`MultiStepIndicator renders correctly > with fulfilledStepIcon 1`] = `
       </span>
     </div>
   </li>
-  <div
-    className="divider divider horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 2: Active - Active Subtitle, status: active"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusActive sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -488,13 +537,14 @@ exports[`MultiStepIndicator renders correctly > with fulfilledStepIcon 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusActiveNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 2: Active - Active Subtitle, status: active"
         className="numberContainer typePrimaryNumberContainer statusActiveNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -533,13 +583,22 @@ exports[`MultiStepIndicator renders correctly > with fulfilledStepIcon 1`] = `
       </span>
     </div>
   </li>
-  <div
-    className="divider divider horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 3: Pending - Pending Subtitle, status: pending"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusPending sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -547,13 +606,14 @@ exports[`MultiStepIndicator renders correctly > with fulfilledStepIcon 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusPendingNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 3: Pending - Pending Subtitle, status: pending"
         className="numberContainer typePrimaryNumberContainer statusPendingNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -601,7 +661,6 @@ exports[`MultiStepIndicator renders correctly > with isFulfilledStepDisplayNumbe
   data-testid="multi-step-indicator"
 >
   <li
-    aria-label="Step 1: Title - Subtitle, status: fulfilled"
     className="clickable indicator typePrimary statusFulfilled sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -609,13 +668,14 @@ exports[`MultiStepIndicator renders correctly > with isFulfilledStepDisplayNumbe
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusFulfilledNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 1: Title - Subtitle, status: fulfilled"
         className="numberContainer typePrimaryNumberContainer statusFulfilledNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -654,13 +714,22 @@ exports[`MultiStepIndicator renders correctly > with isFulfilledStepDisplayNumbe
       </span>
     </div>
   </li>
-  <div
-    className="divider divider horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 2: Active - Active Subtitle, status: active"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusActive sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -668,13 +737,14 @@ exports[`MultiStepIndicator renders correctly > with isFulfilledStepDisplayNumbe
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusActiveNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 2: Active - Active Subtitle, status: active"
         className="numberContainer typePrimaryNumberContainer statusActiveNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -713,13 +783,22 @@ exports[`MultiStepIndicator renders correctly > with isFulfilledStepDisplayNumbe
       </span>
     </div>
   </li>
-  <div
-    className="divider divider horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 3: Pending - Pending Subtitle, status: pending"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusPending sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -727,13 +806,14 @@ exports[`MultiStepIndicator renders correctly > with isFulfilledStepDisplayNumbe
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusPendingNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 3: Pending - Pending Subtitle, status: pending"
         className="numberContainer typePrimaryNumberContainer statusPendingNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -781,7 +861,6 @@ exports[`MultiStepIndicator renders correctly > with mode compact 1`] = `
   data-testid="multi-step-indicator"
 >
   <li
-    aria-label="Step 1: Title - Subtitle, status: fulfilled"
     className="clickable indicator typePrimary statusFulfilled sizeCompact clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -789,13 +868,14 @@ exports[`MultiStepIndicator renders correctly > with mode compact 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusFulfilledNumberDividerContainer sizeCompactNumberDividerContainer"
     >
       <div
+        aria-label="Step 1: Title - Subtitle, status: fulfilled"
         className="numberContainer typePrimaryNumberContainer statusFulfilledNumberContainer sizeCompactNumberContainer"
         role="button"
         tabIndex={0}
@@ -845,13 +925,22 @@ exports[`MultiStepIndicator renders correctly > with mode compact 1`] = `
       </div>
     </div>
   </li>
-  <div
-    className="divider divider compact horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 2: Active - Active Subtitle, status: active"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider compact horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusActive sizeCompact clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -859,13 +948,14 @@ exports[`MultiStepIndicator renders correctly > with mode compact 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusActiveNumberDividerContainer sizeCompactNumberDividerContainer"
     >
       <div
+        aria-label="Step 2: Active - Active Subtitle, status: active"
         className="numberContainer typePrimaryNumberContainer statusActiveNumberContainer sizeCompactNumberContainer"
         role="button"
         tabIndex={0}
@@ -899,13 +989,22 @@ exports[`MultiStepIndicator renders correctly > with mode compact 1`] = `
       </div>
     </div>
   </li>
-  <div
-    className="divider divider compact horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 3: Pending - Pending Subtitle, status: pending"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider compact horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusPending sizeCompact clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -913,13 +1012,14 @@ exports[`MultiStepIndicator renders correctly > with mode compact 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusPendingNumberDividerContainer sizeCompactNumberDividerContainer"
     >
       <div
+        aria-label="Step 3: Pending - Pending Subtitle, status: pending"
         className="numberContainer typePrimaryNumberContainer statusPendingNumberContainer sizeCompactNumberContainer"
         role="button"
         tabIndex={0}
@@ -962,7 +1062,6 @@ exports[`MultiStepIndicator renders correctly > with mode compact textPlacement 
   data-testid="multi-step-indicator"
 >
   <li
-    aria-label="Step 1: Title - Subtitle, status: fulfilled"
     className="clickable indicator typePrimary statusFulfilled sizeRegular clickable textPlacementVertical disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -970,13 +1069,14 @@ exports[`MultiStepIndicator renders correctly > with mode compact textPlacement 
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusFulfilledNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 1: Title - Subtitle, status: fulfilled"
         className="numberContainer typePrimaryNumberContainer statusFulfilledNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1037,7 +1137,6 @@ exports[`MultiStepIndicator renders correctly > with mode compact textPlacement 
     </div>
   </li>
   <li
-    aria-label="Step 2: Active - Active Subtitle, status: active"
     className="clickable indicator typePrimary statusActive sizeRegular clickable textPlacementVertical disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1045,13 +1144,14 @@ exports[`MultiStepIndicator renders correctly > with mode compact textPlacement 
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusActiveNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 2: Active - Active Subtitle, status: active"
         className="numberContainer typePrimaryNumberContainer statusActiveNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1096,7 +1196,6 @@ exports[`MultiStepIndicator renders correctly > with mode compact textPlacement 
     </div>
   </li>
   <li
-    aria-label="Step 3: Pending - Pending Subtitle, status: pending"
     className="clickable indicator typePrimary statusPending sizeRegular clickable textPlacementVertical disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1104,13 +1203,14 @@ exports[`MultiStepIndicator renders correctly > with mode compact textPlacement 
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusPendingNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 3: Pending - Pending Subtitle, status: pending"
         className="numberContainer typePrimaryNumberContainer statusPendingNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1158,7 +1258,6 @@ exports[`MultiStepIndicator renders correctly > with stepComponentClassName 1`] 
   data-testid="multi-step-indicator"
 >
   <li
-    aria-label="Step 1: Title - Subtitle, status: fulfilled"
     className="clickable indicator typePrimary statusFulfilled sizeRegular test clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1166,13 +1265,14 @@ exports[`MultiStepIndicator renders correctly > with stepComponentClassName 1`] 
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusFulfilledNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 1: Title - Subtitle, status: fulfilled"
         className="numberContainer typePrimaryNumberContainer statusFulfilledNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1227,13 +1327,22 @@ exports[`MultiStepIndicator renders correctly > with stepComponentClassName 1`] 
       </span>
     </div>
   </li>
-  <div
-    className="divider divider horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 2: Active - Active Subtitle, status: active"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusActive sizeRegular test clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1241,13 +1350,14 @@ exports[`MultiStepIndicator renders correctly > with stepComponentClassName 1`] 
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusActiveNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 2: Active - Active Subtitle, status: active"
         className="numberContainer typePrimaryNumberContainer statusActiveNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1286,13 +1396,22 @@ exports[`MultiStepIndicator renders correctly > with stepComponentClassName 1`] 
       </span>
     </div>
   </li>
-  <div
-    className="divider divider horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 3: Pending - Pending Subtitle, status: pending"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusPending sizeRegular test clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1300,13 +1419,14 @@ exports[`MultiStepIndicator renders correctly > with stepComponentClassName 1`] 
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusPendingNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 3: Pending - Pending Subtitle, status: pending"
         className="numberContainer typePrimaryNumberContainer statusPendingNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1354,7 +1474,6 @@ exports[`MultiStepIndicator renders correctly > with steps 1`] = `
   data-testid="multi-step-indicator"
 >
   <li
-    aria-label="Step 1: Title - Subtitle, status: fulfilled"
     className="clickable indicator typePrimary statusFulfilled sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1362,13 +1481,14 @@ exports[`MultiStepIndicator renders correctly > with steps 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusFulfilledNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 1: Title - Subtitle, status: fulfilled"
         className="numberContainer typePrimaryNumberContainer statusFulfilledNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1423,13 +1543,22 @@ exports[`MultiStepIndicator renders correctly > with steps 1`] = `
       </span>
     </div>
   </li>
-  <div
-    className="divider divider horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 2: Active - Active Subtitle, status: active"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusActive sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1437,13 +1566,14 @@ exports[`MultiStepIndicator renders correctly > with steps 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusActiveNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 2: Active - Active Subtitle, status: active"
         className="numberContainer typePrimaryNumberContainer statusActiveNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1482,13 +1612,22 @@ exports[`MultiStepIndicator renders correctly > with steps 1`] = `
       </span>
     </div>
   </li>
-  <div
-    className="divider divider horizontal"
-    data-testid="divider"
-    data-vibe="Divider"
-  />
   <li
-    aria-label="Step 3: Pending - Pending Subtitle, status: pending"
+    aria-hidden="true"
+    role="presentation"
+    style={
+      {
+        "display": "contents",
+      }
+    }
+  >
+    <div
+      className="divider divider horizontal"
+      data-testid="divider"
+      data-vibe="Divider"
+    />
+  </li>
+  <li
     className="clickable indicator typePrimary statusPending sizeRegular clickable disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1496,13 +1635,14 @@ exports[`MultiStepIndicator renders correctly > with steps 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusPendingNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 3: Pending - Pending Subtitle, status: pending"
         className="numberContainer typePrimaryNumberContainer statusPendingNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1550,7 +1690,6 @@ exports[`MultiStepIndicator renders correctly > with textPlacement vertical 1`] 
   data-testid="multi-step-indicator"
 >
   <li
-    aria-label="Step 1: Title - Subtitle, status: fulfilled"
     className="clickable indicator typePrimary statusFulfilled sizeRegular clickable textPlacementVertical disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1558,13 +1697,14 @@ exports[`MultiStepIndicator renders correctly > with textPlacement vertical 1`] 
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusFulfilledNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 1: Title - Subtitle, status: fulfilled"
         className="numberContainer typePrimaryNumberContainer statusFulfilledNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1625,7 +1765,6 @@ exports[`MultiStepIndicator renders correctly > with textPlacement vertical 1`] 
     </div>
   </li>
   <li
-    aria-label="Step 2: Active - Active Subtitle, status: active"
     className="clickable indicator typePrimary statusActive sizeRegular clickable textPlacementVertical disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1633,13 +1772,14 @@ exports[`MultiStepIndicator renders correctly > with textPlacement vertical 1`] 
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusActiveNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 2: Active - Active Subtitle, status: active"
         className="numberContainer typePrimaryNumberContainer statusActiveNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}
@@ -1684,7 +1824,6 @@ exports[`MultiStepIndicator renders correctly > with textPlacement vertical 1`] 
     </div>
   </li>
   <li
-    aria-label="Step 3: Pending - Pending Subtitle, status: pending"
     className="clickable indicator typePrimary statusPending sizeRegular clickable textPlacementVertical disableTextSelection"
     data-testid="step-indicator"
     onClick={[Function]}
@@ -1692,13 +1831,14 @@ exports[`MultiStepIndicator renders correctly > with textPlacement vertical 1`] 
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    role="button"
+    role="listitem"
     tabIndex={-1}
   >
     <div
       className="numberDividerContainer typePrimaryNumberDividerContainer statusPendingNumberDividerContainer sizeRegularNumberDividerContainer"
     >
       <div
+        aria-label="Step 3: Pending - Pending Subtitle, status: pending"
         className="numberContainer typePrimaryNumberContainer statusPendingNumberContainer sizeRegularNumberContainer"
         role="button"
         tabIndex={0}

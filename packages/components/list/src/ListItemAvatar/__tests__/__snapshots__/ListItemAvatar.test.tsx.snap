@@ -22,6 +22,7 @@ exports[`renders correctly with empty props 1`] = `
       tabIndex={-1}
     >
       <img
+        alt=""
         className="contentImg contentImgSmall"
         data-testid="avatar-content"
       />
@@ -48,6 +49,7 @@ exports[`renders correctly with picture 1`] = `
       tabIndex={-1}
     >
       <img
+        alt=""
         className="contentImg contentImgSmall"
         data-testid="avatar-content"
         src="image-url.jpg"

@@ -45,6 +45,8 @@ const calculateColorTooltip = (
 };
 
 export interface ColorPickerColorsGridProps extends VibeComponentProps {
+  /** Accessible name for the color selection control. */
+  "aria-label"?: string;
   /**
    * Callback fired when a color is clicked.
    */
@@ -116,6 +118,7 @@ const ColorPickerColorsGrid = forwardRef(
       colorShape,
       showColorNameTooltip: showColorNameTooltip,
       id,
+      "aria-label": ariaLabel = "Color picker",
       "data-testid": dataTestId
     }: ColorPickerColorsGridProps,
     ref: React.ForwardedRef<HTMLUListElement>
@@ -144,6 +147,7 @@ const ColorPickerColorsGrid = forwardRef(
         id={id}
         data-testid={dataTestId}
         role="listbox"
+        aria-label={ariaLabel}
         aria-activedescendant={activeDescendantId}
       >
         {colorsToRender.map((color, index) => {

@@ -30,6 +30,8 @@ export interface BaseInputProps extends BaseInputNativeInputProps, VibeComponent
    * The ARIA role of the input wrapper.
    */
   wrapperRole?: AriaRole;
+  /** Accessible name for a semantic input wrapper, such as a search landmark. */
+  wrapperAriaLabel?: string;
   /**
    * The ARIA role of the input element.
    */

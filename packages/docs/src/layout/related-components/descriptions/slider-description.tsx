@@ -3,7 +3,7 @@ import { RelatedComponent } from "vibe-storybook-components";
 import { Slider } from "@vibe/core";
 
 export const SliderDescription = () => {
-  const component = useMemo(() => <Slider />, []);
+  const component = useMemo(() => <Slider aria-label="Volume" />, []);
 
   return (
     <RelatedComponent

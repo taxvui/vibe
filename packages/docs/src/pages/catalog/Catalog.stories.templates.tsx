@@ -17,7 +17,12 @@ export const CatalogTemplate = () => {
 
   return (
     <Flex direction="column" gap="large" align="stretch" style={{ width: "100%" }}>
-      <Search placeholder="Search by component name..." value={query} onChange={setQuery} />
+      <Search
+        inputAriaLabel="Filter component catalog"
+        placeholder="Search by component name..."
+        value={query}
+        onChange={setQuery}
+      />
       <RelatedComponentsDecorator
         componentsNames={componentsToDisplay}
         linkTarget={RelatedComponents.linkTargets.PARENT}

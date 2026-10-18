@@ -24,6 +24,25 @@ describe("ButtonGroup tests", () => {
     expect(onSelectMock.mock.calls.length).toBe(1);
   });
 
+  it("uses disabled controls for disabled groups and individual options", () => {
+    const onSelect = vi.fn();
+    const { getByText } = render(
+      <ButtonGroup
+        groupAriaLabel="Disabled actions"
+        onSelect={onSelect}
+        disabled
+        options={[{ value: "save", text: "Save" }]}
+      />
+    );
+    expect(getByText("Save").closest("button").getAttribute("aria-disabled")).toBe("true");
+    fireEvent.click(getByText("Save"));
+    expect(onSelect).not.toHaveBeenCalled();
+    const individual = render(
+      <ButtonGroup groupAriaLabel="Actions" options={[{ value: "delete", text: "Delete", disabled: true }]} />
+    );
+    expect(individual.getByText("Delete").closest("button").getAttribute("aria-disabled")).toBe("true");
+  });
+
   describe("a11y", () => {
     it("should add the label", () => {
       expect(screen.getByLabelText(label)).toBeTruthy();

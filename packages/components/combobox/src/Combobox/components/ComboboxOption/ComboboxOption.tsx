@@ -172,8 +172,10 @@ const ComboboxOption = ({
       <div
         ref={ref}
         key={id || label}
-        aria-level={belongToCategory ? 2 : 1}
-        aria-selected={isActive}
+        role="option"
+        tabIndex={-1}
+        aria-selected={!!selected}
+        aria-disabled={disabled || undefined}
         aria-label={ariaLabel || label}
         id={getOptionId(id, index)}
         data-testid={getTestId(ComponentDefaultTestId.COMBOBOX_OPTION, index)}

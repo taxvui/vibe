@@ -73,6 +73,7 @@ describe("List", () => {
         </List>
       );
       expect(getByTestId("list-item-1")).toHaveAttribute("aria-selected", "true");
+      expect(getByTestId("list-item-1")).toHaveAttribute("data-selected", "true");
       expect(getByTestId("list-item-2")).not.toHaveAttribute("aria-selected");
     });
 
@@ -116,7 +117,7 @@ describe("List", () => {
       expect(getAllByRole("listitem")).toHaveLength(2);
     });
 
-    it("selected ListItem should have aria-selected with custom roles", () => {
+    it("selected listitems preserve selection without unsupported aria-selected", () => {
       const { getByTestId } = render(
         <List role="list">
           <ListItem data-testid="list-item-1" role="listitem" selected>
@@ -127,7 +128,8 @@ describe("List", () => {
           </ListItem>
         </List>
       );
-      expect(getByTestId("list-item-1")).toHaveAttribute("aria-selected", "true");
+      expect(getByTestId("list-item-1")).not.toHaveAttribute("aria-selected");
+      expect(getByTestId("list-item-1")).toHaveAttribute("data-selected", "true");
       expect(getByTestId("list-item-2")).not.toHaveAttribute("aria-selected");
     });
 

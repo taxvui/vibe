@@ -243,7 +243,7 @@ describe("Table", () => {
         {
           role: "table",
           children: [
-            { role: "rowgroup", children: [{ role: "columnheader" }] },
+            { role: "row", children: [{ role: "columnheader" }] },
             { role: "rowgroup", children: [{ role: "row", children: [{ role: "cell" }] }] }
           ]
         }

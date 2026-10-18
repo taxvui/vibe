@@ -38,6 +38,7 @@ export default function useClickableProps(
     onMouseLeave,
     tabIndex: disabled ? -1 : tabIndex,
     role,
+    "aria-disabled": disabled || undefined,
     "aria-label": ariaLabel,
     "aria-hidden": ariaHidden,
     "aria-haspopup": ariaHasPopup,

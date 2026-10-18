@@ -402,7 +402,7 @@ exports[`TextField renders correctly > with icon 1`] = `
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
-        role="button"
+        role="presentation"
         tabIndex={-1}
       >
         <span
@@ -682,7 +682,7 @@ exports[`TextField renders correctly > with secondaryIconName 1`] = `
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
-        role="button"
+        role="presentation"
         tabIndex={-1}
       >
         <span

@@ -61,3 +61,37 @@ jobs:
       - name: Deploy showcase
         id: deployment
         uses: actions/deploy-pages@v5
+
+  chromatic:
+    name: Review showcase in Chromatic
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Install CLI metadata dependencies
+        run: |
+          corepack enable
+          corepack prepare yarn@1.22.22 --activate
+          yarn install --frozen-lockfile --ignore-scripts
+      - uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: /tmp/prism-pages
+      - name: Reuse the tested showcase build
+        run: |
+          mkdir -p packages/docs/static_storybook
+          tar -xf /tmp/prism-pages/artifact.tar -C packages/docs/static_storybook
+      - name: Run Chromatic and wait for test results
+        uses: chromaui/action@v11
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: packages/docs
+          storybookBuildDir: static_storybook
+          exitOnceUploaded: false
+          exitZeroOnChanges: false
+          onlyChanged: false

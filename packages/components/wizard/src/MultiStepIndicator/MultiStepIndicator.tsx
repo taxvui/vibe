@@ -88,11 +88,13 @@ const MultiStepIndicator = forwardRef(
               size={finalSize}
             />
             {index !== steps.length - 1 && (
-              <Divider
-                className={cx(styles.divider, dividerComponentClassName, {
-                  [styles.compact]: finalSize === "compact"
-                })}
-              />
+              <li role="presentation" aria-hidden="true" style={{ display: "contents" }}>
+                <Divider
+                  className={cx(styles.divider, dividerComponentClassName, {
+                    [styles.compact]: finalSize === "compact"
+                  })}
+                />
+              </li>
             )}
           </React.Fragment>
         );

@@ -31,6 +31,13 @@ import {
 import styles from "./VirtualizedGrid.module.scss";
 import { type VirtualizedGridItemType as ItemType } from "./VirtualizedGrid.types";
 
+const FocusableGridViewport = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => (
+  // Scroll containers must be focusable for native keyboard scrolling (WCAG 2.1.1).
+  // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+  <div {...props} ref={ref} tabIndex={0} />
+));
+FocusableGridViewport.displayName = "FocusableGridViewport";
+
 export interface VirtualizedGridProps extends VibeComponentProps {
   /**
    * The list of items to be rendered in the grid.
@@ -283,6 +290,7 @@ const VirtualizedGrid = forwardRef(
             updateGridSize(width, height);
             return (
               <Grid
+                outerElementType={FocusableGridViewport}
                 ref={gridRef}
                 height={height}
                 width={width}

@@ -25,6 +25,8 @@ import { type SubIcon } from "@vibe/icon";
 import styles from "./ColorPicker.module.scss";
 
 export interface ColorPickerProps extends VibeComponentProps {
+  /** Accessible name for the color selection control. */
+  "aria-label"?: string;
   /**
    * The selected color(s).
    */
@@ -120,6 +122,7 @@ const ColorPicker = forwardRef(
       forceUseRawColorList,
       showColorNameTooltip,
       id,
+      "aria-label": ariaLabel = "Color picker",
       "data-testid": dataTestId
     }: ColorPickerProps,
     ref: React.ForwardedRef<HTMLElement>
@@ -135,12 +138,12 @@ const ColorPicker = forwardRef(
       <DialogContentContainer
         ref={mergedRef}
         className={cx(styles.colorPicker, styles.colorPickerDialogContent, className)}
-        aria-labelledby="Color Picker Dialog"
-        aria-describedby="Pick color"
+        aria-label={ariaLabel}
         style={{ width }}
         data-vibe={ComponentVibeId.COLOR_PICKER}
       >
         <ColorPickerContent
+          aria-label={ariaLabel}
           onValueChange={onChange}
           value={value}
           noColorText={noColorText}

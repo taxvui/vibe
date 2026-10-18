@@ -1,0 +1,2009 @@
+{
+  "sourceCommit": "97ee37422857e14ffbc57561a75daefe71939111",
+  "engine": "axe-core 4.10.3",
+  "mode": "Light",
+  "viewport": {
+    "width": 1200,
+    "height": 900
+  },
+  "storiesScanned": 528,
+  "storiesWithViolations": 163,
+  "executionErrors": 0,
+  "limitations": [
+    "Initial baseline did not wait for play completion; Prism Interactions may report transient contrast and has an existing Chromatic snapshot exclusion. The checked-in scanner waits for play completion and honors existing exclusions.",
+    "These are local findings, not the results of a new Chromatic build."
+  ],
+  "findings": [
+    {
+      "id": "prism-design-system--interactions",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 62
+        }
+      ]
+    },
+    {
+      "id": "catalog--catalog",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 8
+        },
+        {
+          "id": "aria-allowed-role",
+          "nodes": 4
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 6
+        },
+        {
+          "id": "aria-input-field-name",
+          "nodes": 4
+        },
+        {
+          "id": "aria-progressbar-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 4
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 3
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "button-name",
+          "nodes": 3
+        },
+        {
+          "id": "label",
+          "nodes": 1
+        },
+        {
+          "id": "landmark-unique",
+          "nodes": 1
+        },
+        {
+          "id": "list",
+          "nodes": 1
+        },
+        {
+          "id": "nested-interactive",
+          "nodes": 3
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "foundations-spacing--sizes",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-accordion--multi-active",
+      "rules": [
+        {
+          "id": "landmark-unique",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-alertbanner--types",
+      "rules": [
+        {
+          "id": "landmark-no-duplicate-banner",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-attentionbox--attention-box-inside-a-dialog-combobox",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "image-alt",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-avatar--square-avatar",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        },
+        {
+          "id": "svg-img-alt",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-avatar--avatar-with-text",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ]
+    },
+    {
+      "id": "components-avatargroup--max-avatars-to-display",
+      "rules": [
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-avatargroup--disabled",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-avatargroup--grid-tooltip",
+      "rules": [
+        {
+          "id": "aria-command-name",
+          "nodes": 4
+        },
+        {
+          "id": "image-alt",
+          "nodes": 4
+        }
+      ]
+    },
+    {
+      "id": "components-avatargroup--displaying-teams",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 4
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "components-breadcrumbsbar-breadcrumbitem--overview",
+      "rules": [
+        {
+          "id": "listitem",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-badge--avatar-story",
+      "rules": [
+        {
+          "id": "image-alt",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-breadcrumbsbar-breadcrumbitem--states",
+      "rules": [
+        {
+          "id": "landmark-unique",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-breadcrumbsbar-breadcrumbitem--with-icon",
+      "rules": [
+        {
+          "id": "landmark-unique",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-breadcrumbsbar-breadcrumbsbar--navigatable-breadcrumbs",
+      "rules": [
+        {
+          "id": "image-alt",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-buttongroup--disabled",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ]
+    },
+    {
+      "id": "components-buttongroup--disabled-singe-button",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-chips--overview",
+      "rules": [
+        {
+          "id": "nested-interactive",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-chips--chips-with-avatars",
+      "rules": [
+        {
+          "id": "image-alt",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "components-chips--themes",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-chips--clickable",
+      "rules": [
+        {
+          "id": "nested-interactive",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-chips--sizes",
+      "rules": [
+        {
+          "id": "image-alt",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "components-chips--colorful-chips-for-different-content",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "label",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-chips--chips-in-a-person-picker-combo-box",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        },
+        {
+          "id": "image-alt",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-colorpicker--overview",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-colorpicker--with-indicator",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-colorpicker--selected",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-colorpicker--text-indication",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-colorpicker--no-color",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-colorpicker--selected-icon",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-colorpicker--shapes",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--overview",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--default",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--sizes",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 15
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 3
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 3
+        },
+        {
+          "id": "landmark-unique",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--combobox-inside-a-dialog",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 5
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--with-categories",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 18
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 3
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 9
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 6
+        },
+        {
+          "id": "landmark-unique",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--with-icons",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 5
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--with-option-renderer",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 9
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--with-button",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 5
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--with-virtualization-optimization",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 13
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 3
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 5
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 2
+        },
+        {
+          "id": "landmark-unique",
+          "nodes": 1
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--loading-state",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-combobox-deprecated--combobox-as-person-picker",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 1
+        },
+        {
+          "id": "image-alt",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-counter--notification-counter",
+      "rules": [
+        {
+          "id": "svg-img-alt",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-datepicker--single-day",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 2
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "id": "components-datepicker--date-range",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 2
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "id": "components-datepicker--overview",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 2
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "id": "components-datepicker--with-locale",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 2
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "id": "components-dialog--show-triggers",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-dialog--overview",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-dialog--hide-triggers",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "id": "components-dialog--dialog-with-tooltip",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-dialogcontentcontainer--overview",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-dialogcontentcontainer--popover",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-dialogcontentcontainer--modal",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-dropdown-basic-dropdown--dropdown-with-icon-or-avatar",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 2
+        },
+        {
+          "id": "image-alt",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "components-dropdown-dropdown-box-mode--inside-a-dialog",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-dropdown-dropdown-box-mode--people-picker",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        },
+        {
+          "id": "image-alt",
+          "nodes": 4
+        },
+        {
+          "id": "listitem",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-iconbutton--icon-button-as-close-button",
+      "rules": [
+        {
+          "id": "image-alt",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-list--overview",
+      "rules": [
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-list--list-with-categories",
+      "rules": [
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-list--list-with-avatars",
+      "rules": [
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-list--list-with-icons",
+      "rules": [
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-listitem--overview",
+      "rules": [
+        {
+          "id": "aria-required-parent",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-list--list-with-virtualization-optimization",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 2
+        },
+        {
+          "id": "aria-input-field-name",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-listitem--sizes",
+      "rules": [
+        {
+          "id": "aria-required-parent",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-list-listitem--states",
+      "rules": [
+        {
+          "id": "aria-required-parent",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-list-listitem--with-icon",
+      "rules": [
+        {
+          "id": "aria-required-parent",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-listitem--with-avatar",
+      "rules": [
+        {
+          "id": "aria-required-parent",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-new-list--list-with-avatars",
+      "rules": [
+        {
+          "id": "image-alt",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-list-new-list--sticky-title",
+      "rules": [
+        {
+          "id": "aria-allowed-role",
+          "nodes": 3
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-new-list--scrollable-list",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-new-list--list-with-title",
+      "rules": [
+        {
+          "id": "aria-allowed-role",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-new-list--in-dialog-container",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-new-list--virtualized-list",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 12
+        },
+        {
+          "id": "listitem",
+          "nodes": 12
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-list-new-listitem--with-avatar",
+      "rules": [
+        {
+          "id": "image-alt",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-loader--loader-in-text-field",
+      "rules": [
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menu--overview",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menu--sizes",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 9
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 3
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menu--menu-with-sub-menu",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menu--menu-with-icons",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menu--menu-with-grid-items-and-sub-menu",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menu--menu-with-2-depth-sub-menu",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menudivider--menu-with-divider",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menudivider--sub-menu-with-divider",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menugriditem--overview",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 1
+        },
+        {
+          "id": "aria-allowed-role",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menuitem--overview",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menugriditem--inside-sub-menus",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menugriditem--with-disabled-states",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 1
+        },
+        {
+          "id": "aria-allowed-role",
+          "nodes": 2
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menuitem--states",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menuitem--icons",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 4
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menuitem--sub-menu",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 2
+        },
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menuitem--overflow",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menuitem--label",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menuitembutton--overview",
+      "rules": [
+        {
+          "id": "aria-required-parent",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menuitem--tooltip-story",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 5
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-menu-menutitle--caption-placements",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 6
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "components-modal-basic-modal--alert-modal",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-basic-modal--overview",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-basic-modal--scroll",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-basic-modal--footer-with-extra-content",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-basic-modal--wizard",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-basic-modal--confirmation",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-basic-modal--header-with-icon-button",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-media-modal--wizard",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-media-modal--overview",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-media-modal--announcement",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-media-modal--header-with-icon-button",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-side-by-side-modal--overview",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-side-by-side-modal--wizard",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-modal-side-by-side-modal--header-with-icon-button",
+      "rules": [
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-multistepindicator--overview",
+      "rules": [
+        {
+          "id": "aria-allowed-role",
+          "nodes": 3
+        },
+        {
+          "id": "aria-command-name",
+          "nodes": 1
+        },
+        {
+          "id": "list",
+          "nodes": 1
+        },
+        {
+          "id": "nested-interactive",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-multistepindicator--types",
+      "rules": [
+        {
+          "id": "aria-allowed-role",
+          "nodes": 12
+        },
+        {
+          "id": "aria-command-name",
+          "nodes": 4
+        },
+        {
+          "id": "list",
+          "nodes": 4
+        },
+        {
+          "id": "nested-interactive",
+          "nodes": 12
+        }
+      ]
+    },
+    {
+      "id": "components-multistepindicator--placements",
+      "rules": [
+        {
+          "id": "aria-allowed-role",
+          "nodes": 6
+        },
+        {
+          "id": "aria-command-name",
+          "nodes": 2
+        },
+        {
+          "id": "list",
+          "nodes": 2
+        },
+        {
+          "id": "nested-interactive",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "id": "components-multistepindicator--fulfilled-icons",
+      "rules": [
+        {
+          "id": "aria-allowed-role",
+          "nodes": 9
+        },
+        {
+          "id": "aria-command-name",
+          "nodes": 2
+        },
+        {
+          "id": "list",
+          "nodes": 3
+        },
+        {
+          "id": "nested-interactive",
+          "nodes": 9
+        }
+      ]
+    },
+    {
+      "id": "components-multistepindicator--sizes",
+      "rules": [
+        {
+          "id": "aria-allowed-role",
+          "nodes": 6
+        },
+        {
+          "id": "aria-command-name",
+          "nodes": 2
+        },
+        {
+          "id": "list",
+          "nodes": 2
+        },
+        {
+          "id": "nested-interactive",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "id": "components-multistepindicator--transition-animation",
+      "rules": [
+        {
+          "id": "aria-allowed-role",
+          "nodes": 3
+        },
+        {
+          "id": "list",
+          "nodes": 1
+        },
+        {
+          "id": "nested-interactive",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-multistepindicator--multi-step-wizard",
+      "rules": [
+        {
+          "id": "aria-allowed-role",
+          "nodes": 3
+        },
+        {
+          "id": "aria-command-name",
+          "nodes": 1
+        },
+        {
+          "id": "list",
+          "nodes": 1
+        },
+        {
+          "id": "nested-interactive",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-numberfield--overview",
+      "rules": [
+        {
+          "id": "label",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-numberfield--states",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-progressbar--regular",
+      "rules": [
+        {
+          "id": "aria-progressbar-name",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "components-progressbar--overview",
+      "rules": [
+        {
+          "id": "aria-progressbar-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-progressbar--with-secondary-value",
+      "rules": [
+        {
+          "id": "aria-progressbar-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-progressbar--multi-progress-bar",
+      "rules": [
+        {
+          "id": "aria-progressbar-name",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-progressbar--exceeding-max-value",
+      "rules": [
+        {
+          "id": "aria-progressbar-name",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "components-progressbar--progress-bar-as-loading-indicator",
+      "rules": [
+        {
+          "id": "aria-progressbar-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-search--sizes",
+      "rules": [
+        {
+          "id": "landmark-unique",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-search--filter-in-combobox",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 5
+        },
+        {
+          "id": "aria-dialog-name",
+          "nodes": 1
+        },
+        {
+          "id": "aria-required-children",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-slider--with-labels",
+      "rules": [
+        {
+          "id": "label",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "id": "components-slider--customisation",
+      "rules": [
+        {
+          "id": "aria-input-field-name",
+          "nodes": 4
+        },
+        {
+          "id": "label",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "components-slider--limits-steps",
+      "rules": [
+        {
+          "id": "label",
+          "nodes": 4
+        }
+      ]
+    },
+    {
+      "id": "components-table--overview",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "id": "components-table--sizes",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 6
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "id": "components-table--borders",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 4
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 10
+        }
+      ]
+    },
+    {
+      "id": "components-table--table-header-functionality",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "id": "components-table--loading",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "id": "components-table--scroll",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "id": "components-table--virtualized-scroll",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 3
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 14
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-table--sticky-column",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 10
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-table--highlighted-row",
+      "rules": [
+        {
+          "id": "aria-required-children",
+          "nodes": 2
+        },
+        {
+          "id": "aria-required-parent",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "id": "components-textfield--states",
+      "rules": [
+        {
+          "id": "aria-command-name",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "components-textfield--overview",
+      "rules": [
+        {
+          "id": "aria-command-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-virtualizedgrid--overview",
+      "rules": [
+        {
+          "id": "scrollable-region-focusable",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "components-virtualizedlist--overview",
+      "rules": [
+        {
+          "id": "scrollable-region-focusable",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "layout-box--disabled",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "layout-flex--overview",
+      "rules": [
+        {
+          "id": "aria-command-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "theming-themeprovider--product-theming",
+      "rules": [
+        {
+          "id": "aria-input-field-name",
+          "nodes": 1
+        },
+        {
+          "id": "button-name",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "theming-themeprovider--monday-sdk-integration",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "id": "hooks-useactivedescendantlistfocus--overview",
+      "rules": [
+        {
+          "id": "label",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "hooks-usedebounceevent--passing-an-initial-value",
+      "rules": [
+        {
+          "id": "label",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "hooks-usedebounceevent--overview",
+      "rules": [
+        {
+          "id": "label",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "hooks-usedebounceevent--passing-an-on-change-handler",
+      "rules": [
+        {
+          "id": "label",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "hooks-usedebounceevent--with-trim",
+      "rules": [
+        {
+          "id": "label",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "hooks-usegridkeyboardnavigation--overview",
+      "rules": [
+        {
+          "id": "label",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "internal-baseinput--overview",
+      "rules": [
+        {
+          "id": "label",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "internal-baselist--scrollable-list",
+      "rules": [
+        {
+          "id": "scrollable-region-focusable",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "internal-baselist--as-menu",
+      "rules": [
+        {
+          "id": "aria-allowed-attr",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "storybook-blocks-anchorlistitem--overview",
+      "rules": [
+        {
+          "id": "listitem",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "storybook-blocks-deprecatedwarning--overview",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "storybook-blocks-componentrules--overview",
+      "rules": [
+        {
+          "id": "heading-order",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "storybook-blocks-functionarguments--overview",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "id": "storybook-blocks-tip--overview",
+      "rules": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    }
+  ]
+}

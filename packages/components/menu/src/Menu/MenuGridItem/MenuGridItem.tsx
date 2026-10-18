@@ -115,13 +115,13 @@ const MenuGridItem = forwardRef(
     });
 
     return (
-      <section
+      <div
         ref={mergedRef}
         className={className}
         id={id}
         data-testid={dataTestId || getTestId(ComponentDefaultTestId.MENU_GRID_ITEM, id)}
         tabIndex={-1}
-        role="grid"
+        role="group"
         {...focusWithinProps}
       >
         <GridKeyboardNavigationContext.Provider value={keyboardContext}>
@@ -131,7 +131,7 @@ const MenuGridItem = forwardRef(
             ref: childRef
           })}
         </GridKeyboardNavigationContext.Provider>
-      </section>
+      </div>
     );
   }
 );

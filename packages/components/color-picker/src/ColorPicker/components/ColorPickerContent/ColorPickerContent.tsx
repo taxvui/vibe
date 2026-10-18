@@ -23,6 +23,8 @@ import ColorPickerColorsGrid from "./ColorPickerColorsGrid";
 import { type SubIcon } from "@vibe/icon";
 
 export interface ColorPickerContentProps extends VibeComponentProps {
+  /** Accessible name for the color selection control. */
+  "aria-label"?: string;
   /**
    * The selected color(s).
    */
@@ -122,6 +124,7 @@ const ColorPickerContent = forwardRef(
       forceUseRawColorList,
       showColorNameTooltip,
       id,
+      "aria-label": ariaLabel = "Color picker",
       "data-testid": dataTestId
     }: ColorPickerContentProps,
     ref: React.ForwardedRef<HTMLDivElement>
@@ -170,6 +173,7 @@ const ColorPickerContent = forwardRef(
       <div className={className} style={{ width }} ref={mergedRef} tabIndex={-1}>
         <GridKeyboardNavigationContext.Provider value={keyboardContext}>
           <ColorPickerColorsGrid
+            aria-label={ariaLabel}
             ref={colorsRef}
             onColorClicked={onColorClicked}
             colorsToRender={colorsToRender}

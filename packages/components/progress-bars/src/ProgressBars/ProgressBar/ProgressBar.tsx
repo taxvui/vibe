@@ -159,6 +159,7 @@ const ProgressBar = forwardRef(
         <Bar
           className={getProgressBarClassNames(value)}
           barStyle={barStyle}
+          barLabelName={ariaLabel}
           value={value}
           animated={animated}
           type="primary"

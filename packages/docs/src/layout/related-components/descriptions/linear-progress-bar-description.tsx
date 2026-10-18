@@ -9,7 +9,7 @@ export const ProgressBarDescription = () => {
     };
     return (
       <div style={style}>
-        <ProgressBar value={50} />
+        <ProgressBar aria-label="Completion" value={50} />
       </div>
     );
   }, []);

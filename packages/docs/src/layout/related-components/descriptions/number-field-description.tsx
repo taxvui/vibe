@@ -7,7 +7,7 @@ export const NumberFieldDescription = () => {
   const component = useMemo(() => {
     return (
       <div style={{ width: "80%" }}>
-        <NumberField leftIcon={TextBig} size="large" value={42} onChange={() => {}} />
+        <NumberField aria-label="Font size" leftIcon={TextBig} size="large" value={42} onChange={() => {}} />
       </div>
     );
   }, []);

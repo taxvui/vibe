@@ -21,4 +21,17 @@ describe("avatar", () => {
     fireEvent.click(component);
     expect(onClickCallback.mock.calls.length).toBe(1);
   });
+  it("treats unnamed images as decorative", () => {
+    const { container } = renderComponent({ type: "img", src: "person.png" });
+    expect(container.querySelector("img").getAttribute("alt")).toBe("");
+  });
+
+  it("names the clickable avatar and prevents activation when disabled", () => {
+    const onClick = vi.fn();
+    const { getByRole } = renderComponent({ onClick, disabled: true, "aria-label": "Julia Martinez" });
+    const button = getByRole("button", { name: "Julia Martinez" });
+    expect(button.getAttribute("aria-disabled")).toBe("true");
+    fireEvent.click(button);
+    expect(onClick).not.toHaveBeenCalled();
+  });
 });

@@ -26,7 +26,7 @@ const TableHeader = forwardRef(
         id={id}
         className={cx(styles.tableHeader, { [styles.virtualized]: isVirtualized }, className)}
         data-testid={dataTestId || getTestId(ComponentDefaultTestId.TABLE_HEADER, id)}
-        role="rowgroup"
+        role="row"
         onScroll={onHeadScroll}
       >
         {children}

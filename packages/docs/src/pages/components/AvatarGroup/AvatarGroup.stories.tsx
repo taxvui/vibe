@@ -411,22 +411,22 @@ export const CustomCounter: Story = {
 export const GridTooltip: Story = {
   render: () => (
     <AvatarGroup size="large" type="img" max={4}>
-      <Avatar src={person1} />
-      <Avatar src={person2} />
-      <Avatar src={person3} />
-      <Avatar src={person4} />
-      <Avatar src={person1} />
-      <Avatar src={person2} />
-      <Avatar src={person3} />
-      <Avatar src={person4} />
-      <Avatar src={person1} />
-      <Avatar src={person2} />
-      <Avatar src={person3} />
-      <Avatar src={person4} />
-      <Avatar src={person1} />
-      <Avatar src={person2} />
-      <Avatar src={person3} />
-      <Avatar src={person4} />
+      <Avatar src={person1} aria-label="Julia Martinez" />
+      <Avatar src={person2} aria-label="Sophia Johnson" />
+      <Avatar src={person3} aria-label="Marco DiAngelo" />
+      <Avatar src={person4} aria-label="Liam Caldwell" />
+      <Avatar src={person1} aria-label="Julia Martinez" />
+      <Avatar src={person2} aria-label="Sophia Johnson" />
+      <Avatar src={person3} aria-label="Marco DiAngelo" />
+      <Avatar src={person4} aria-label="Liam Caldwell" />
+      <Avatar src={person1} aria-label="Julia Martinez" />
+      <Avatar src={person2} aria-label="Sophia Johnson" />
+      <Avatar src={person3} aria-label="Marco DiAngelo" />
+      <Avatar src={person4} aria-label="Liam Caldwell" />
+      <Avatar src={person1} aria-label="Julia Martinez" />
+      <Avatar src={person2} aria-label="Sophia Johnson" />
+      <Avatar src={person3} aria-label="Marco DiAngelo" />
+      <Avatar src={person4} aria-label="Liam Caldwell" />
     </AvatarGroup>
   )
 };

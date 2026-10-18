@@ -14,7 +14,7 @@ export const ComboboxDescription = () => {
       { id: "3", label: "Option 3" }
     ];
     return (
-      <DialogContentContainer style={style}>
+      <DialogContentContainer role={null} style={style}>
         <Combobox placeholder="Placeholder text here" options={option} size="small" optionLineHeight={28} />
       </DialogContentContainer>
     );

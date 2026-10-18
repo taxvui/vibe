@@ -14,6 +14,8 @@ export interface DialogContentContainerProps extends VibeComponentProps {
    * The ID of the element that labels this dialog.
    */
   "aria-labelledby"?: string;
+  /** Accessible name when no visible heading is referenced. */
+  "aria-label"?: string;
   /**
    * The ID of the element that describes this dialog.
    */
@@ -64,8 +66,8 @@ const DialogContentContainer = forwardRef(
         id={id}
         role={roleValue}
         data-testid={dataTestId}
-        aria-labelledby={ariaLabelledby}
-        aria-describedby={ariaDescribedby}
+        aria-labelledby={ariaLabelledby || undefined}
+        aria-describedby={ariaDescribedby || undefined}
         ref={mergedRef}
         style={style}
         className={cx(

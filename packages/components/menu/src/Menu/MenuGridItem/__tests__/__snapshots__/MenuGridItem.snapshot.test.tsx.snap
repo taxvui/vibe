@@ -1,11 +1,11 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`MenuGridItem renders correctly > with a child 1`] = `
-<section
+<div
   data-testid="menu-grid-item"
   onBlur={[Function]}
   onFocus={[Function]}
-  role="grid"
+  role="group"
   tabIndex={-1}
 >
   <div
@@ -13,15 +13,15 @@ exports[`MenuGridItem renders correctly > with a child 1`] = `
   >
     Hello!
   </div>
-</section>
+</div>
 `;
 
 exports[`MenuGridItem renders correctly > with a disabled child 1`] = `
-<section
+<div
   data-testid="menu-grid-item"
   onBlur={[Function]}
   onFocus={[Function]}
-  role="grid"
+  role="group"
   tabIndex={-1}
 >
   <div
@@ -29,5 +29,5 @@ exports[`MenuGridItem renders correctly > with a disabled child 1`] = `
   >
     this should be disabled
   </div>
-</section>
+</div>
 `;

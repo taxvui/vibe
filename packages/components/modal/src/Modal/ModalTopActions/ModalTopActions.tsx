@@ -14,7 +14,12 @@ const colorToButtonColor: Record<ModalTopActionsTheme, ModalTopActionsButtonColo
   light: "fixed-light"
 };
 
-const ModalTopActions = ({ renderAction, theme, closeButtonAriaLabel, onClose }: ModalTopActionsProps) => {
+const ModalTopActions = ({
+  renderAction,
+  theme,
+  closeButtonAriaLabel = "Close modal",
+  onClose
+}: ModalTopActionsProps) => {
   const buttonColor = colorToButtonColor[theme] || "primary";
 
   return (

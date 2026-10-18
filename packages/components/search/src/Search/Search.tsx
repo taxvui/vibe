@@ -110,6 +110,7 @@ const Search = forwardRef(
         autoComplete={autoComplete}
         size={size}
         wrapperRole="search"
+        wrapperAriaLabel={`${inputAriaLabel || placeholder || "Search"} region`}
         inputRole={searchResultsContainerId ? "combobox" : undefined}
         aria-label={inputAriaLabel}
         aria-busy={loading}

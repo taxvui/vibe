@@ -62,7 +62,7 @@ const AvatarContent = ({
       return (
         <img
           role={role}
-          alt={ariaLabel}
+          alt={ariaLabel || ""}
           src={src}
           className={className}
           id={id}
@@ -74,9 +74,8 @@ const AvatarContent = ({
         <Icon
           icon={icon}
           aria-label={ariaLabel}
-          // role={role}
           className={className}
-          aria-hidden={false}
+          aria-hidden={!ariaLabel}
           id={id}
           data-testid={dataTestId || getTestId(ComponentDefaultTestId.AVATAR_CONTENT, id)}
         />
@@ -85,7 +84,7 @@ const AvatarContent = ({
       return (
         <span
           aria-label={ariaLabel}
-          role={role}
+          role={role || (ariaLabel ? "img" : undefined)}
           className={cx(className, textClassName)}
           id={id}
           data-testid={dataTestId || getTestId(ComponentDefaultTestId.AVATAR_CONTENT, id)}

@@ -2,6 +2,7 @@ import { vi, beforeEach, afterEach, describe, it, expect } from "vitest";
 import React from "react";
 import { fireEvent, render, screen, waitFor, cleanup } from "@testing-library/react";
 import Combobox from "../Combobox";
+import ComboboxOption from "../components/ComboboxOption/ComboboxOption";
 
 function clickValueCheckCallback(getByLabelText, onClickMock, labelText, value, numberOfCall = 1) {
   fireEvent.click(getByLabelText(labelText));
@@ -152,5 +153,17 @@ describe("Combobox tests", () => {
       clickValueCheckCallback(getByLabelText, onClickMock, "item 4", "item 4", 4);
       clickValueCheckCallback(getByLabelText, onClickMock, "item 5", "item 5", 5);
     });
+  });
+});
+
+describe("Combobox option semantics", () => {
+  it("reports selection independently of keyboard focus", () => {
+    const { getByRole, rerender } = render(
+      <ComboboxOption index={0} option={{ value: "blue", label: "Blue" }} isActive />
+    );
+    expect(getByRole("option").getAttribute("aria-selected")).toBe("false");
+    rerender(<ComboboxOption index={0} option={{ value: "blue", label: "Blue", selected: true, disabled: true }} />);
+    expect(getByRole("option").getAttribute("aria-selected")).toBe("true");
+    expect(getByRole("option").getAttribute("aria-disabled")).toBe("true");
   });
 });

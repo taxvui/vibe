@@ -16,6 +16,7 @@ exports[`Combobox renders correctly > when disabled 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper disabled medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -76,6 +77,7 @@ exports[`Combobox renders correctly > with another noResultsMessage 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -136,6 +138,7 @@ exports[`Combobox renders correctly > with autoFocus 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -196,6 +199,7 @@ exports[`Combobox renders correctly > with className 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -256,6 +260,7 @@ exports[`Combobox renders correctly > with custom search icon 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -316,6 +321,7 @@ exports[`Combobox renders correctly > with divider 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -380,7 +386,6 @@ exports[`Combobox renders correctly > with divider 1`] = `
       >
         <div
           aria-label="Option 1"
-          aria-level={1}
           aria-selected={false}
           className="comboboxOption"
           data-testid="combobox-option_0"
@@ -389,11 +394,13 @@ exports[`Combobox renders correctly > with divider 1`] = `
           onKeyDown={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          role="option"
           style={
             {
               "height": 32,
             }
           }
+          tabIndex={-1}
         >
           <div
             className="optionLabel"
@@ -438,7 +445,6 @@ exports[`Combobox renders correctly > with divider 1`] = `
       >
         <div
           aria-label="Option 2"
-          aria-level={1}
           aria-selected={false}
           className="comboboxOption"
           data-testid="combobox-option_1"
@@ -447,11 +453,13 @@ exports[`Combobox renders correctly > with divider 1`] = `
           onKeyDown={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          role="option"
           style={
             {
               "height": 32,
             }
           }
+          tabIndex={-1}
         >
           <div
             className="optionLabel"
@@ -481,6 +489,7 @@ exports[`Combobox renders correctly > with divider and colored categories 1`] = 
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -550,7 +559,6 @@ exports[`Combobox renders correctly > with divider and colored categories 1`] = 
       >
         <div
           aria-label="Option 1"
-          aria-level={1}
           aria-selected={false}
           className="comboboxOption"
           data-testid="combobox-option_0"
@@ -559,11 +567,13 @@ exports[`Combobox renders correctly > with divider and colored categories 1`] = 
           onKeyDown={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          role="option"
           style={
             {
               "height": 32,
             }
           }
+          tabIndex={-1}
         >
           <div
             className="optionLabel"
@@ -613,7 +623,6 @@ exports[`Combobox renders correctly > with divider and colored categories 1`] = 
       >
         <div
           aria-label="Option 2"
-          aria-level={1}
           aria-selected={false}
           className="comboboxOption"
           data-testid="combobox-option_1"
@@ -622,11 +631,13 @@ exports[`Combobox renders correctly > with divider and colored categories 1`] = 
           onKeyDown={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          role="option"
           style={
             {
               "height": 32,
             }
           }
+          tabIndex={-1}
         >
           <div
             className="optionLabel"
@@ -656,6 +667,7 @@ exports[`Combobox renders correctly > with empty props 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -716,6 +728,7 @@ exports[`Combobox renders correctly > with id 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -776,6 +789,7 @@ exports[`Combobox renders correctly > with loading 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -864,6 +878,7 @@ exports[`Combobox renders correctly > with optionClassName 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -924,6 +939,7 @@ exports[`Combobox renders correctly > with optionLineHeight 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -984,6 +1000,7 @@ exports[`Combobox renders correctly > with optionRenderer 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -1035,7 +1052,6 @@ exports[`Combobox renders correctly > with optionRenderer 1`] = `
       >
         <div
           aria-label="Option 1"
-          aria-level={1}
           aria-selected={false}
           className="comboboxOption"
           data-testid="combobox-option_0"
@@ -1044,11 +1060,13 @@ exports[`Combobox renders correctly > with optionRenderer 1`] = `
           onKeyDown={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          role="option"
           style={
             {
               "height": 32,
             }
           }
+          tabIndex={-1}
         >
           <div>
             some render of 
@@ -1061,7 +1079,6 @@ exports[`Combobox renders correctly > with optionRenderer 1`] = `
       >
         <div
           aria-label="Option 2"
-          aria-level={1}
           aria-selected={false}
           className="comboboxOption"
           data-testid="combobox-option_1"
@@ -1070,11 +1087,13 @@ exports[`Combobox renders correctly > with optionRenderer 1`] = `
           onKeyDown={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          role="option"
           style={
             {
               "height": 32,
             }
           }
+          tabIndex={-1}
         >
           <div>
             some render of 
@@ -1103,6 +1122,7 @@ exports[`Combobox renders correctly > with optionsListHeight 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -1163,6 +1183,7 @@ exports[`Combobox renders correctly > with placeholder 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper medium searchWrapper comboboxSearchWrapper"
       role="search"
     >
@@ -1223,6 +1244,7 @@ exports[`Combobox renders correctly > with size 1`] = `
     }
   >
     <div
+      aria-label="Search for content region"
       className="wrapper large searchWrapper comboboxSearchWrapper"
       role="search"
     >
